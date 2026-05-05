@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#e6b24a" />
+  <title>Support — Schnelle Hilfe für KMU · Gross ICT</title>
+  <meta name="description" content="ICT-Support, Remote-Hilfe und Vor-Ort-Service für KMU in der Zentralschweiz. Code eingeben und in 30 Sekunden verbunden." />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232c2820'/%3E%3Cg fill='none' stroke='%23e6b24a' stroke-width='9' stroke-linecap='round'%3E%3Cpath d='M32 18C18 32 18 68 32 82'/%3E%3Cpath d='M68 18C82 32 82 68 68 82'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='4.5' fill='%23e6b24a'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a href="#main" class="sr-only">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html" class="brand" aria-label="Gross ICT — Startseite"><img src="assets/logo.png" alt="Gross ICT" class="brand__logo" width="2048" height="329" decoding="async" /></a>
+
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü">
+          <span class="nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav__links" id="primary-nav">
+          <a class="nav__link" href="leistungen.html">Leistungen</a>
+          <a class="nav__link" href="rechner.html">Rechner</a>
+          <a class="nav__link" href="support.html" aria-current="page">Support</a>
+          <a class="nav__link" href="ueber-uns.html">Über uns</a>
+          <a class="nav__link" href="referenzen.html">Referenzen</a>
+          <a class="nav__link" href="kontakt.html">Kontakt</a>
+          <a class="btn btn--gold nav__cta" href="kontakt.html">
+            Beratung anfragen
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO + Quick-Connect -->
+    <section class="support-hero">
+      <div class="container">
+        <div class="support-hero__layout">
+
+          <div class="reveal">
+            <span class="eyebrow">Support &amp; Helpdesk</span>
+            <h1 class="support-hero__title">
+              Wir helfen.<br />
+              <span class="accent">Schnell.</span>
+            </h1>
+            <p class="support-hero__intro">
+              Telefon, E-Mail, Remote oder Vor-Ort. Sie sagen uns, wo es brennt — wir
+              sind sofort dran. Ohne Warteschleife, ohne Tickets, die im Nirgendwo verschwinden.
+            </p>
+            <div class="support-status" aria-live="polite">
+              <span class="support-status__dot" aria-hidden="true"></span>
+              Service betriebsbereit&nbsp;·&nbsp;<strong>Mo–Fr&nbsp;08:00–17:30</strong>
+            </div>
+          </div>
+
+          <div class="qc-card reveal" data-delay="1">
+            <div class="qc-card__head">
+              <div class="qc-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/>
+                </svg>
+              </div>
+              <div>
+                <div class="qc-card__title">Schnellverbindung</div>
+                <div class="qc-card__sub">Geben Sie Ihre 9-stellige ID ein — wir übernehmen den Bildschirm.</div>
+              </div>
+            </div>
+
+            <form class="qc-form" data-qc-form onsubmit="return false;">
+              <div class="qc-form__row">
+                <input
+                  class="qc-input"
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[0-9 ]*"
+                  maxlength="11"
+                  placeholder="123 456 789"
+                  aria-label="Verbindungs-ID"
+                  data-qc-input />
+                <button type="submit" class="btn btn--gold" data-qc-submit>
+                  Verbinden
+                  <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+              </div>
+              <div class="qc-form__hint" data-qc-hint>
+                Ihre ID erhalten Sie von uns am Telefon. Die Verbindung ist verschlüsselt und endet, sobald Sie das Fenster schliessen.
+              </div>
+
+              <div class="qc-tools">
+                <a class="qc-tool" href="https://download.teamviewer.com/download/TeamViewerQS.exe" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  TeamViewer QS
+                </a>
+                <a class="qc-tool" href="https://anydesk.com/de/downloads" rel="noopener" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  AnyDesk
+                </a>
+                <a class="qc-tool" href="tel:+41415623416">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+                  Anrufen
+                </a>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK CONTACT + SLA -->
+    <section class="support-grid">
+      <div class="container">
+
+        <div class="support-quick">
+          <a class="support-quick__card reveal" href="tel:+41415623416">
+            <div class="support-quick__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+            </div>
+            <div class="support-quick__label">Telefon</div>
+            <div class="support-quick__value">+41 41 562 34 16</div>
+          </a>
+
+          <a class="support-quick__card reveal" data-delay="1" href="mailto:support@gross-ict.ch">
+            <div class="support-quick__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="support-quick__label">Support-E-Mail</div>
+            <div class="support-quick__value">support@gross-ict.ch</div>
+          </a>
+
+          <a class="support-quick__card reveal" data-delay="2" href="https://www.google.com/maps/search/?api=1&amp;query=Neuhushof+3,+6144+Zell+LU" rel="noopener" target="_blank">
+            <div class="support-quick__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="support-quick__label">Vor-Ort-Service</div>
+            <div class="support-quick__value">Zentralschweiz</div>
+          </a>
+
+          <a class="support-quick__card reveal" data-delay="3" href="kontakt.html">
+            <div class="support-quick__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h2"/></svg>
+            </div>
+            <div class="support-quick__label">Ticket erfassen</div>
+            <div class="support-quick__value">Kontaktformular</div>
+          </a>
+        </div>
+
+        <header class="section-head">
+          <div class="reveal">
+            <span class="eyebrow">Wartungsverträge</span>
+            <h2 class="section-head__title mt-4">
+              Drei Pakete.<br />
+              <span class="serif-italic gold-accent">Eine</span> Reaktionszeit, die passt.
+            </h2>
+          </div>
+          <p class="section-head__copy reveal" data-delay="1">
+            Sie wählen die Reaktionszeit, wir garantieren sie. Alles inklusive Hosting,
+            SSL und automatischen Backups. Vertragslaufzeit immer monatlich kündbar.
+          </p>
+        </header>
+
+        <div class="sla-grid">
+          <article class="sla-card reveal">
+            <div class="sla-card__name">Basic</div>
+            <div class="sla-card__time">8&nbsp;h<small>Reaktionszeit Mo–Fr</small></div>
+            <ul class="sla-card__list">
+              <li>Helpdesk per Telefon &amp; Mail</li>
+              <li>Remote-Support</li>
+              <li>Monitoring &amp; Updates</li>
+              <li>Monatliche Statusmeldung</li>
+            </ul>
+            <div class="sla-card__price">ab&nbsp;<strong>CHF 49</strong>&nbsp;/&nbsp;Mt.</div>
+          </article>
+
+          <article class="sla-card sla-card--featured reveal" data-delay="1">
+            <span class="sla-card__badge">Beliebt</span>
+            <div class="sla-card__name">Professional</div>
+            <div class="sla-card__time">4&nbsp;h<small>Reaktionszeit Mo–Fr</small></div>
+            <ul class="sla-card__list">
+              <li>Alles aus Basic</li>
+              <li>Vor-Ort-Service Zentralschweiz</li>
+              <li>2&nbsp;h/Mt. Anpassungen inklusive</li>
+              <li>Performance-Monitoring</li>
+              <li>Quartals-Review</li>
+            </ul>
+            <div class="sla-card__price">ab&nbsp;<strong>CHF 149</strong>&nbsp;/&nbsp;Mt.</div>
+          </article>
+
+          <article class="sla-card reveal" data-delay="2">
+            <div class="sla-card__name">Enterprise</div>
+            <div class="sla-card__time">1&nbsp;h<small>Reaktionszeit · 24/7 möglich</small></div>
+            <ul class="sla-card__list">
+              <li>Alles aus Professional</li>
+              <li>24/7-Bereitschaft auf Anfrage</li>
+              <li>Dedizierter Ansprechpartner</li>
+              <li>Disaster-Recovery-Test 2×/Jahr</li>
+              <li>Service-Level-Agreement schriftlich</li>
+            </ul>
+            <div class="sla-card__price">individuelles&nbsp;<strong>Angebot</strong></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <header class="section-head">
+          <div class="reveal">
+            <span class="eyebrow">Häufig gefragt</span>
+            <h2 class="section-head__title mt-4">
+              Antworten auf<br />
+              <span class="serif-italic gold-accent">die wichtigsten</span> Fragen.
+            </h2>
+          </div>
+          <p class="section-head__copy reveal" data-delay="1">
+            Etwas nicht dabei? Greifen Sie zum Hörer — wir antworten lieber persönlich.
+          </p>
+        </header>
+
+        <div class="faq__list">
+          <details class="faq-item reveal">
+            <summary>Was kostet ein Support-Einsatz ohne Vertrag?</summary>
+            <div class="faq-item__body">
+              CHF 165 / Stunde im Stundensatz, abgerechnet im 15-Minuten-Takt.
+              Vor-Ort-Anfahrten in der Zentralschweiz mit fairer Kilometerpauschale.
+              Mit einem Wartungsvertrag wird's günstiger und planbar.
+            </div>
+          </details>
+          <details class="faq-item reveal" data-delay="1">
+            <summary>Wie schnell sind Sie wirklich erreichbar?</summary>
+            <div class="faq-item__body">
+              Telefon: in der Regel innert 1 Klingelton. E-Mails werden während der Arbeitszeit
+              binnen 30 Minuten gelesen. Remote-Sitzungen können wir meist innerhalb von
+              15 Minuten starten — abhängig vom gewählten SLA-Paket.
+            </div>
+          </details>
+          <details class="faq-item reveal" data-delay="2">
+            <summary>Welche Remote-Tools verwenden Sie?</summary>
+            <div class="faq-item__body">
+              Standardmässig <strong>TeamViewer Quick Support</strong>. Für sicherheitskritische Umgebungen
+              auch <strong>AnyDesk</strong> oder <strong>Microsoft Quick Assist</strong>. Alle Verbindungen sind
+              Ende-zu-Ende-verschlüsselt und enden, sobald das Fenster geschlossen wird.
+            </div>
+          </details>
+          <details class="faq-item reveal" data-delay="3">
+            <summary>Was, wenn das Problem ausserhalb der Bürozeiten passiert?</summary>
+            <div class="faq-item__body">
+              Mit dem Enterprise-Paket erreichen Sie uns 24/7 über die Notfallnummer.
+              Ohne 24/7-Vertrag versuchen wir trotzdem zu helfen — eine Garantie geben wir
+              dann aber nicht.
+            </div>
+          </details>
+          <details class="faq-item reveal" data-delay="4">
+            <summary>Können Sie unsere bisherige IT übernehmen?</summary>
+            <div class="faq-item__body">
+              Ja. Wir machen einen kostenlosen Erstcheck Ihrer Infrastruktur, dokumentieren,
+              was vorhanden ist, und erstellen einen Übergabeplan. Keine Bindung an einen
+              Wartungsvertrag, bevor Sie sich überzeugt haben.
+            </div>
+          </details>
+          <details class="faq-item reveal" data-delay="5">
+            <summary>Bleiben unsere Daten in der Schweiz?</summary>
+            <div class="faq-item__body">
+              Ja. Hosting auf CH-Servern (Standort Zürich), Backups innerhalb der Schweiz,
+              Verträge nach Schweizer Recht. Ausnahmen nur, wenn Sie aktiv ein internationales
+              Cloud-Setup wünschen.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta__card reveal">
+          <div class="cta__inner">
+            <div>
+              <span class="eyebrow" style="color: var(--gold);">Bereit?</span>
+              <h2 class="cta__title mt-4">Ein Anruf —<br /><span class="accent">und es läuft.</span></h2>
+            </div>
+            <div>
+              <p class="cta__copy">
+                Wir hören kurz zu, geben Ihnen die ID, und in 30 Sekunden sind wir auf
+                Ihrem Bildschirm. Erstgespräch kostenlos, Beratung ehrlich.
+              </p>
+              <div class="cta__actions">
+                <a class="btn btn--gold" href="tel:+41415623416">
+                  +41 41 562 34 16
+                  <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <a class="btn btn--ghost" href="mailto:support@gross-ict.ch">support@gross-ict.ch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand"><img src="assets/logo.png" alt="Gross ICT" class="footer__brand-logo" width="2048" height="329" decoding="async" loading="lazy" /></div>
+          <p class="footer__intro">Ihr ICT-Partner für KMU in der Zentralschweiz. Webseiten, Apps, Netzwerk und Support — persönlich und aus einer Hand.</p>
+        </div>
+        <div>
+          <div class="footer__title">Leistungen</div>
+          <ul class="footer__list">
+            <li><a href="leistungen.html#webseiten">Webseiten</a></li>
+            <li><a href="leistungen.html#web-apps">Web-Applikationen</a></li>
+            <li><a href="leistungen.html#mobile-apps">Mobile Apps</a></li>
+            <li><a href="leistungen.html#ict-support">ICT-Support</a></li>
+            <li><a href="leistungen.html#security">Security &amp; Firewall</a></li>
+            <li><a href="leistungen.html#wlan">Netzwerk &amp; WLAN</a></li>
+            <li><a href="leistungen.html#server">Server &amp; Storage</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__title">Tools &amp; Firma</div>
+          <ul class="footer__list">
+            <li><a href="rechner.html">Webseitenrechner</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="referenzen.html">Referenzen</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__title">Kontakt</div>
+          <div class="footer__contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Neuhushof 3<br />6144 Zell · Luzern</span>
+          </div>
+          <div class="footer__contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+            <a href="tel:+41415623416">+41 41 562 34 16</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@gross-ict.ch">info@gross-ict.ch</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2025</span> Gross ICT — Stefan Gross</span>
+        <div class="footer__bottom-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/support.js" defer></script>
+</body>
+</html>
