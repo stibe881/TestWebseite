@@ -404,6 +404,15 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   color: var(--gold);
   background: rgba(230,178,74,0.04);
 }
+.cta__card .btn--ghost {
+  color: var(--cream);
+  border-color: rgba(242,233,225,0.35);
+}
+.cta__card .btn--ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(230,178,74,0.08);
+}
 .btn__arrow {
   width: 14px; height: 14px;
   transition: transform 0.3s var(--ease-out);
