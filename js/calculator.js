@@ -63,8 +63,15 @@
       if (hintEl) hintEl.innerHTML = 'Erste Sprache inklusive &middot; jede weitere +&nbsp;' + fmtChf(discounted);
     }
 
-    // Hosting & Maintenance radio prices
-    form.querySelectorAll('input[name="hosting"][data-monthly], input[name="maint"][data-monthly]').forEach((input) => {
+    // Hosting radio prices (no discount)
+    form.querySelectorAll('input[name="hosting"][data-monthly]').forEach((input) => {
+      const baseMonthly = Number(input.dataset.monthly);
+      const priceEl = input.parentElement.querySelector('.calc-option__price');
+      if (priceEl) priceEl.textContent = fmtChf(baseMonthly) + '\u00a0/\u00a0Mt.';
+    });
+
+    // Maintenance radio prices (discount applies)
+    form.querySelectorAll('input[name="maint"][data-monthly]').forEach((input) => {
       const baseMonthly = Number(input.dataset.monthly);
       const discounted = applyDiscount(baseMonthly, discount);
       const priceEl = input.parentElement.querySelector('.calc-option__price');
@@ -138,7 +145,7 @@
     // Hosting (radio with data-monthly)
     const hostingInput = form.querySelector('input[name="hosting"]:checked');
     if (hostingInput) {
-      monthlyHosting = applyDiscount(Number(hostingInput.dataset.monthly) || 0, discount);
+      monthlyHosting = Number(hostingInput.dataset.monthly) || 0;
     }
 
     // Maintenance (radio with data-monthly)
