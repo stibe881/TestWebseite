@@ -67,7 +67,37 @@
           <div class="calc__inputs">
 
             <fieldset class="calc-group reveal">
-              <legend class="calc-group__legend"><span class="calc-group__num">01</span> Welche Art von Webseite?</legend>
+              <legend class="calc-group__legend"><span class="calc-group__num">01</span> Sind Sie…</legend>
+              <div class="calc-options" role="radiogroup" aria-label="Kundentyp">
+                <label class="calc-option calc-option--compact">
+                  <input type="radio" name="customer" value="unternehmen" data-discount="0" checked />
+                  <div class="calc-option__body">
+                    <div class="calc-option__title">Unternehmen / KMU</div>
+                    <div class="calc-option__sub">Firma, Einzelunternehmen, GmbH, AG, etc.</div>
+                    <div class="calc-option__price">Standardpreise</div>
+                  </div>
+                </label>
+                <label class="calc-option calc-option--compact">
+                  <input type="radio" name="customer" value="verein" data-discount="25" />
+                  <div class="calc-option__body">
+                    <div class="calc-option__title">Verein / Organisation</div>
+                    <div class="calc-option__sub">Verein, Stiftung, Genossenschaft, NGO.</div>
+                    <div class="calc-option__price" style="color: var(--gold-deep);">−25 % auf alles</div>
+                  </div>
+                </label>
+                <label class="calc-option calc-option--compact">
+                  <input type="radio" name="customer" value="privat" data-discount="50" />
+                  <div class="calc-option__body">
+                    <div class="calc-option__title">Privatperson</div>
+                    <div class="calc-option__sub">Persönliches Projekt, Portfolio, Blog.</div>
+                    <div class="calc-option__price" style="color: var(--gold-deep);">−50 % auf alles</div>
+                  </div>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="calc-group reveal" data-delay="1">
+              <legend class="calc-group__legend"><span class="calc-group__num">02</span> Welche Art von Webseite?</legend>
               <div class="calc-options" role="radiogroup" aria-label="Projekttyp">
                 <label class="calc-option">
                   <input type="radio" name="type" value="landing" data-price="1500" data-base checked />
@@ -104,8 +134,8 @@
               </div>
             </fieldset>
 
-            <fieldset class="calc-group reveal" data-delay="1">
-              <legend class="calc-group__legend"><span class="calc-group__num">02</span> Wie viele Sprachen?</legend>
+            <fieldset class="calc-group reveal" data-delay="2">
+              <legend class="calc-group__legend"><span class="calc-group__num">03</span> Wie viele Sprachen?</legend>
               <div class="calc-stepper">
                 <button type="button" class="calc-stepper__btn" data-step="-1" aria-label="Sprache entfernen">−</button>
                 <input type="number" name="languages" value="1" min="1" max="6" data-extra-each="800" data-extra-from="2" />
@@ -114,8 +144,8 @@
               </div>
             </fieldset>
 
-            <fieldset class="calc-group reveal" data-delay="2">
-              <legend class="calc-group__legend"><span class="calc-group__num">03</span> Zusatzleistungen</legend>
+            <fieldset class="calc-group reveal" data-delay="3">
+              <legend class="calc-group__legend"><span class="calc-group__num">04</span> Zusatzleistungen</legend>
               <div class="calc-checks">
                 <label class="calc-check">
                   <input type="checkbox" name="cms" data-price="500" checked />
@@ -156,31 +186,53 @@
               </div>
             </fieldset>
 
-            <fieldset class="calc-group reveal" data-delay="3">
-              <legend class="calc-group__legend"><span class="calc-group__num">04</span> Hosting &amp; Wartung</legend>
+            <fieldset class="calc-group reveal" data-delay="4">
+              <legend class="calc-group__legend"><span class="calc-group__num">05</span> Hosting</legend>
+              <div class="calc-options" role="radiogroup" aria-label="Hosting">
+                <label class="calc-option calc-option--compact">
+                  <input type="radio" name="hosting" value="none" data-monthly="0" />
+                  <div class="calc-option__body">
+                    <div class="calc-option__title">Kein Hosting</div>
+                    <div class="calc-option__sub">Sie hosten selbst.</div>
+                    <div class="calc-option__price">CHF&nbsp;0&nbsp;/&nbsp;Mt.</div>
+                  </div>
+                </label>
+                <label class="calc-option calc-option--compact">
+                  <input type="radio" name="hosting" value="included" data-monthly="189" checked />
+                  <div class="calc-option__body">
+                    <div class="calc-option__title">Hosting</div>
+                    <div class="calc-option__sub">inkl. Node.js, Backup, SSL</div>
+                    <div class="calc-option__price">CHF&nbsp;189&nbsp;/&nbsp;Mt.</div>
+                  </div>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="calc-group reveal" data-delay="5">
+              <legend class="calc-group__legend"><span class="calc-group__num">06</span> Wartung</legend>
               <div class="calc-options" role="radiogroup" aria-label="Wartungspaket">
                 <label class="calc-option calc-option--compact">
                   <input type="radio" name="maint" value="none" data-monthly="0" />
                   <div class="calc-option__body">
                     <div class="calc-option__title">Kein Wartungsvertrag</div>
-                    <div class="calc-option__sub">Sie hosten selbst. Updates auf Anfrage.</div>
+                    <div class="calc-option__sub">Updates auf Anfrage.</div>
                     <div class="calc-option__price">CHF&nbsp;0&nbsp;/&nbsp;Mt.</div>
                   </div>
                 </label>
                 <label class="calc-option calc-option--compact">
                   <input type="radio" name="maint" value="basic" data-monthly="49" checked />
                   <div class="calc-option__body">
-                    <div class="calc-option__title">Basic — Hosting CH inkl.</div>
-                    <div class="calc-option__sub">Hosting, SSL, Backups, kleine Anpassungen.</div>
+                    <div class="calc-option__title">Basic</div>
+                    <div class="calc-option__sub">Kleine Anpassungen (15 Minuten / Mt.), Verfügbarkeitsmonitoring</div>
                     <div class="calc-option__price">CHF&nbsp;49&nbsp;/&nbsp;Mt.</div>
                   </div>
                 </label>
                 <label class="calc-option calc-option--compact">
-                  <input type="radio" name="maint" value="pro" data-monthly="149" />
+                  <input type="radio" name="maint" value="pro" data-monthly="210" />
                   <div class="calc-option__body">
-                    <div class="calc-option__title">Pro — Wartung &amp; Reaktion 4h</div>
-                    <div class="calc-option__sub">Inkl. 2h/Mt. Anpassungen, Performance-Monitoring.</div>
-                    <div class="calc-option__price">CHF&nbsp;149&nbsp;/&nbsp;Mt.</div>
+                    <div class="calc-option__title">Pro</div>
+                    <div class="calc-option__sub">Anpassungen (2h / Mt.), Performance- und Verfügbarkeitsmonitoring, Reaktionszeit 4h</div>
+                    <div class="calc-option__price">CHF&nbsp;210&nbsp;/&nbsp;Mt.</div>
                   </div>
                 </label>
               </div>
@@ -195,7 +247,8 @@
                 <h2 class="calc-summary__title">
                   <span class="calc-summary__amount" data-out-total>CHF&nbsp;1'500</span>
                 </h2>
-                <span class="calc-summary__monthly">+ <strong data-out-monthly>CHF&nbsp;49</strong> / Monat Wartung</span>
+                <div class="calc-summary__monthly">+ <strong data-out-monthly-hosting>CHF&nbsp;189</strong> / Monat Hosting</div>
+                <div class="calc-summary__monthly">+ <strong data-out-monthly-maint>CHF&nbsp;49</strong> / Monat Wartung</div>
               </div>
 
               <ul class="calc-summary__breakdown" data-out-breakdown>

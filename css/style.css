@@ -710,6 +710,9 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   .hero-reel__badge--a { left: -8px; }
   .hero-reel__badge--b { right: -8px; }
 }
+@media (max-width: 768px) {
+  .hero__visual { display: none; }
+}
 @media (max-width: 560px) {
   .hero-reel__badge { display: none; }
 }
@@ -2041,6 +2044,9 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
 }
 .calc-summary__row-label { color: var(--text-secondary); }
 .calc-summary__row-price { font-family: var(--font-mono); color: var(--text-primary); font-weight: 600; }
+.calc-summary__row--type { padding-bottom: 0.625rem; margin-bottom: 0.25rem; border-bottom: 1px solid rgba(18,22,25,0.08); }
+.calc-summary__row--type .calc-summary__row-label { color: var(--text-primary); font-weight: 600; }
+.calc-summary__row--type .calc-summary__row-price { color: var(--gold-deep); }
 
 .calc-summary__actions {
   display: flex;
