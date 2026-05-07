@@ -90,6 +90,31 @@ if ($curlError) {
 }
 
 if ($httpCode >= 200 && $httpCode < 300) {
+    // Send push notification to all admins via Edge Function
+    $pushData = [
+        "recipients" => "all_admins",
+        "recipientType" => "admin",
+        "title" => "🎫 Neues Webseite-Ticket",
+        "body" => $title,
+        "data" => [
+            "category" => "tickets",
+            "type" => "new_ticket",
+        ],
+    ];
+
+    $pushCh = curl_init("$supabaseUrl/functions/v1/send-push");
+    curl_setopt_array($pushCh, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => json_encode($pushData),
+        CURLOPT_HTTPHEADER => [
+            "Content-Type: application/json",
+            "Authorization: Bearer $supabaseKey",
+        ],
+    ]);
+    curl_exec($pushCh);
+    curl_close($pushCh);
+
     http_response_code(200);
     echo json_encode(["success" => "Vielen Dank! Ihr Support-Ticket wurde erfolgreich erstellt. Wir melden uns in Kürze bei Ihnen."]);
 } else {
