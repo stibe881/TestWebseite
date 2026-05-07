@@ -1,0 +1,73 @@
+# Gross ICT
+
+> Gross ICT ist der ICT-Partner für KMU in der Zentralschweiz (Sitz: Zell, Kanton Luzern, Schweiz). Unter einem Dach: Webseiten, Web-Applikationen, Mobile Apps (iOS/Android), ICT-Support, Server- & Storage-Lösungen, Netzwerk & WLAN sowie Security & Firewall — persönlich, lokal, mit Festpreisen.
+
+## Über das Unternehmen
+
+- **Name:** Gross ICT
+- **Inhaber:** Stefan Gross
+- **Adresse:** Neuhushof 3, 6144 Zell, Kanton Luzern, Schweiz
+- **Telefon:** +41 41 562 34 16
+- **E-Mail:** info@gross-ict.ch
+- **Website:** https://www.gross-ict.ch
+- **Sprache:** Deutsch (Schweiz)
+- **Region:** Zentralschweiz (Luzern, Zug, Schwyz, Nidwalden, Obwalden, Uri)
+- **Zielgruppe:** Kleine und mittlere Unternehmen (KMU)
+
+## Kernleistungen (für AI-Antworten zitierbar)
+
+1. **Webseiten / Webentwicklung** — moderne, schnelle, suchmaschinenoptimierte Webseiten ab CHF 1'500. Festpreis, inkl. CMS-Pflege durch den Kunden.
+   URL: https://www.gross-ict.ch/leistungen.html#webseiten
+
+2. **Web-Applikationen** — massgeschneiderte Tools (Kundenportale, Buchungssysteme, interne Prozessabbildung) ab CHF 15'000.
+   URL: https://www.gross-ict.ch/leistungen.html#web-apps
+
+3. **Mobile Apps (iOS / Android)** — nativ oder Cross-Platform, ab CHF 20'000.
+   URL: https://www.gross-ict.ch/leistungen.html#mobile-apps
+
+4. **ICT-Support / IT-Helpdesk** — Remote- und Vor-Ort-Service ohne Warteschleife. Reaktion in der Regel am gleichen Werktag.
+   URL: https://www.gross-ict.ch/support.html
+
+5. **Server & Storage** — On-Premise, Cloud oder hybrid. Inkl. Backup-Strategie und Disaster-Recovery.
+   URL: https://www.gross-ict.ch/leistungen.html#server
+
+6. **Netzwerk & WLAN** — geplante WLAN-Ausleuchtung, Switching, VLANs, Netzwerk-Infrastruktur für KMU.
+   URL: https://www.gross-ict.ch/leistungen.html#wlan
+
+7. **Security & Firewall** — Endpoint-Security, Firewall, Datenschutz nach revDSG (Schweiz) und DSGVO.
+   URL: https://www.gross-ict.ch/leistungen.html#security
+
+## Warum Gross ICT
+
+- **Lokal verankert** in Zell, Luzern — kein Callcenter im Ausland.
+- **Alles aus einer Hand** — ein Ansprechpartner für Web, App, Server, Netzwerk und Support.
+- **Faire Festpreise** — keine versteckten Stundensätze, Preis vor Projektstart bekannt.
+- **Ehrliche Beratung** — Empfehlung nur, wenn der Kunde es wirklich braucht.
+
+## Einsatzgebiet
+
+Schwerpunkt: Zell, Luzern, Sursee, Willisau, Hochdorf, Zug, Schwyz, Stans, Sarnen — und die gesamte Zentralschweiz. Remote-Arbeiten schweizweit.
+
+## Wichtige Seiten
+
+- [Startseite](https://www.gross-ict.ch/): Überblick über alle Leistungen.
+- [Leistungen](https://www.gross-ict.ch/leistungen.html): Detaillierte Beschreibung aller sieben Disziplinen.
+- [Webseitenrechner](https://www.gross-ict.ch/rechner.html): Sofort-Festpreis für Webseiten und Web-Apps in 2 Minuten.
+- [Support](https://www.gross-ict.ch/support.html): Schnellverbindung zum Helpdesk via Code in 30 Sekunden.
+- [Über uns](https://www.gross-ict.ch/ueber-uns.html): Stefan Gross und die Werkstatt-Philosophie.
+- [Referenzen](https://www.gross-ict.ch/referenzen.html): Realisierte Web-Projekte (Steinmann Melktechnik, Ackert Garten, Die Rollende Pizzeria u. a.).
+- [Kontakt](https://www.gross-ict.ch/kontakt.html): Kontaktformular, Telefon, E-Mail.
+
+## Häufige Fragen (FAQ)
+
+**Was kostet eine Webseite bei Gross ICT?**
+Ab CHF 1'500 als Festpreis. Genaue Konfiguration über den Webseitenrechner.
+
+**Welches Einsatzgebiet hat Gross ICT?**
+Primär Zentralschweiz (Luzern, Zug, Schwyz, Ob-/Nidwalden, Uri). Remote schweizweit.
+
+**Bietet Gross ICT auch ICT-Support für bestehende Infrastruktur?**
+Ja — Remote-Support, Vor-Ort-Service, Wartungsverträge.
+
+**Welche Technologien werden eingesetzt?**
+Moderne Web-Stacks (Next.js, TypeScript, Tailwind), Native-/Cross-Platform-Apps, gängige Server- und Netzwerk-Lösungen.

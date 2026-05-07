@@ -4,18 +4,346 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#121619" />
-  <title>Gross ICT — Digitale Lösungen & ICT für KMU in der Zentralschweiz</title>
-  <meta name="description" content="Webseiten, Web-Applikationen, Mobile Apps, ICT-Support, Netzwerk und Server — Ihr ICT-Partner aus Zell, Luzern. Persönlich, lokal, alles aus einer Hand." />
-  <meta name="author" content="Gross ICT, Stefan Gross" />
 
+  <!-- Primary SEO ------------------------------------------------ -->
+  <title>Gross ICT Luzern · Webseiten, Apps, IT-Support, Server & Netzwerk für KMU</title>
+  <meta name="description" content="Gross ICT — IT-Dienstleister in Zell, Luzern. Webseiten ab CHF 1'500, Web-Apps, Mobile Apps, IT-Support, Server, Netzwerk & Security für KMU in der Zentralschweiz. Festpreise, ein Ansprechpartner, persönlich." />
+  <meta name="keywords" content="Webseite erstellen Luzern, Webentwicklung Zentralschweiz, IT-Dienstleistungen Luzern, ICT-Support KMU, Server Hosting Schweiz, Netzwerk WLAN KMU, App Entwicklung Luzern, IT-Support Zentralschweiz, Webagentur Luzern, Mobile App Entwicklung Schweiz, IT-Firma Zell, Gross ICT" />
+  <meta name="author" content="Stefan Gross — Gross ICT" />
+  <meta name="publisher" content="Gross ICT" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="rating" content="general" />
+  <meta name="revisit-after" content="7 days" />
+
+  <!-- Geo / Local SEO -------------------------------------------- -->
+  <meta name="geo.region" content="CH-LU" />
+  <meta name="geo.placename" content="Zell, Luzern, Zentralschweiz" />
+  <meta name="geo.position" content="47.1428;8.0392" />
+  <meta name="ICBM" content="47.1428, 8.0392" />
+  <meta name="language" content="German" />
+  <meta http-equiv="content-language" content="de-CH" />
+
+  <!-- Canonical & Hreflang --------------------------------------- -->
+  <link rel="canonical" href="https://www.gross-ict.ch/" />
+  <link rel="alternate" hreflang="de-CH" href="https://www.gross-ict.ch/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.gross-ict.ch/" />
+
+  <!-- Open Graph ------------------------------------------------- -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_CH" />
-  <meta property="og:title" content="Gross ICT — Digitale Lösungen für KMU" />
-  <meta property="og:description" content="Webseiten, Web-Apps, Mobile Apps, IT-Support und Netzwerk-Infrastruktur aus der Zentralschweiz." />
+  <meta property="og:url" content="https://www.gross-ict.ch/" />
+  <meta property="og:title" content="Gross ICT Luzern — Webseiten, Apps, IT-Support & Server für KMU" />
+  <meta property="og:description" content="IT-Dienstleister aus Zell, Luzern. Webseiten ab CHF 1'500, Apps, Server, Netzwerk und Support für KMU in der Zentralschweiz — alles aus einer Hand." />
   <meta property="og:site_name" content="Gross ICT" />
+  <meta property="og:image" content="https://www.gross-ict.ch/assets/showcase-poster.jpg" />
+  <meta property="og:image:alt" content="Gross ICT — ICT-Leistungen für KMU in der Zentralschweiz" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
+  <!-- Twitter / X ------------------------------------------------ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gross ICT — Webseiten, Apps, IT-Support für KMU" />
+  <meta name="twitter:description" content="IT-Dienstleister in Zell, Luzern. Webseiten ab CHF 1'500, Apps, Server, Netzwerk, Support — Zentralschweiz." />
+  <meta name="twitter:image" content="https://www.gross-ict.ch/assets/showcase-poster.jpg" />
+  <meta name="twitter:image:alt" content="Gross ICT — ICT für KMU in der Zentralschweiz" />
+
+  <!-- Performance Hints ------------------------------------------ -->
+  <link rel="preload" as="image" href="assets/logo.png" fetchpriority="high" />
+  <link rel="preload" as="video" href="assets/showcase.mp4" type="video/mp4" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+  <!-- Icons & Manifest ------------------------------------------- -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23121619'/%3E%3Cg fill='none' stroke='%23e6b24a' stroke-width='9' stroke-linecap='round'%3E%3Cpath d='M32 18C18 32 18 68 32 82'/%3E%3Cpath d='M68 18C82 32 82 68 68 82'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='4.5' fill='%23e6b24a'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Gross ICT" href="/opensearch.xml" />
+
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ===== Structured Data (JSON-LD) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService", "Organization"],
+        "@id": "https://www.gross-ict.ch/#business",
+        "name": "Gross ICT",
+        "alternateName": ["Gross IT", "Gross ICT Luzern"],
+        "legalName": "Gross ICT — Stefan Gross",
+        "description": "ICT-Partner für KMU in der Zentralschweiz. Webseiten, Web-Applikationen, Mobile Apps, IT-Support, Server, Netzwerk und Security — persönlich, lokal, alles aus einer Hand.",
+        "url": "https://www.gross-ict.ch/",
+        "logo": "https://www.gross-ict.ch/assets/logo.png",
+        "image": "https://www.gross-ict.ch/assets/showcase-poster.jpg",
+        "telephone": "+41-41-562-34-16",
+        "email": "info@gross-ict.ch",
+        "priceRange": "CHF 1'500 – CHF 50'000+",
+        "currenciesAccepted": "CHF",
+        "paymentAccepted": "Rechnung, Banküberweisung, TWINT",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Neuhushof 3",
+          "postalCode": "6144",
+          "addressLocality": "Zell",
+          "addressRegion": "LU",
+          "addressCountry": "CH"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 47.1428,
+          "longitude": 8.0392
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Luzern" },
+          { "@type": "AdministrativeArea", "name": "Zug" },
+          { "@type": "AdministrativeArea", "name": "Schwyz" },
+          { "@type": "AdministrativeArea", "name": "Nidwalden" },
+          { "@type": "AdministrativeArea", "name": "Obwalden" },
+          { "@type": "AdministrativeArea", "name": "Uri" },
+          { "@type": "Country", "name": "Schweiz" }
+        ],
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 47.05, "longitude": 8.30 },
+          "geoRadius": 80000
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Stefan Gross",
+          "jobTitle": "Inhaber & Entwickler",
+          "worksFor": { "@id": "https://www.gross-ict.ch/#business" }
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.gross-ict.ch/"
+        ],
+        "knowsAbout": [
+          "Webentwicklung",
+          "Webseite erstellen",
+          "Web-Applikationen",
+          "Mobile App Entwicklung",
+          "iOS App Entwicklung",
+          "Android App Entwicklung",
+          "IT-Support",
+          "ICT-Support",
+          "IT-Helpdesk",
+          "Server-Administration",
+          "Cloud-Server",
+          "Netzwerk-Infrastruktur",
+          "WLAN-Planung",
+          "Firewall",
+          "IT-Security",
+          "Datensicherung Backup",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "KMU IT-Beratung"
+        ],
+        "slogan": "Digitale Lösungen, gewachsen aus Zentralschweizer Substanz."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.gross-ict.ch/#website",
+        "url": "https://www.gross-ict.ch/",
+        "name": "Gross ICT",
+        "publisher": { "@id": "https://www.gross-ict.ch/#business" },
+        "inLanguage": "de-CH",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.gross-ict.ch/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.gross-ict.ch/#webpage",
+        "url": "https://www.gross-ict.ch/",
+        "name": "Gross ICT — Webseiten, Apps, IT-Support & Server für KMU in Luzern",
+        "isPartOf": { "@id": "https://www.gross-ict.ch/#website" },
+        "about": { "@id": "https://www.gross-ict.ch/#business" },
+        "primaryImageOfPage": "https://www.gross-ict.ch/assets/showcase-poster.jpg",
+        "inLanguage": "de-CH",
+        "datePublished": "2024-01-01",
+        "dateModified": "2026-05-07"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.gross-ict.ch/" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.gross-ict.ch/leistungen.html#webseiten-service",
+        "serviceType": "Webentwicklung",
+        "name": "Webseite erstellen für KMU",
+        "description": "Schnelle, suchmaschinenoptimierte Webseiten — Festpreis ab CHF 1'500, inkl. mobile Optimierung und einfacher Pflege.",
+        "provider": { "@id": "https://www.gross-ict.ch/#business" },
+        "areaServed": { "@type": "Country", "name": "Schweiz" },
+        "offers": {
+          "@type": "Offer",
+          "price": "1500",
+          "priceCurrency": "CHF",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Web-Applikation",
+        "name": "Web-App Entwicklung",
+        "description": "Massgeschneiderte Web-Applikationen für KMU — Kundenportale, Buchungssysteme, interne Tools.",
+        "provider": { "@id": "https://www.gross-ict.ch/#business" },
+        "offers": { "@type": "Offer", "price": "15000", "priceCurrency": "CHF" }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Mobile App Entwicklung",
+        "name": "iOS- und Android-Apps",
+        "description": "Native und Cross-Platform Mobile-Apps für KMU.",
+        "provider": { "@id": "https://www.gross-ict.ch/#business" },
+        "offers": { "@type": "Offer", "price": "20000", "priceCurrency": "CHF" }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "IT-Support",
+        "name": "ICT-Support & IT-Helpdesk",
+        "description": "Remote- und Vor-Ort-IT-Support für KMU in der Zentralschweiz — schnell erreichbar, ohne Warteschleife.",
+        "provider": { "@id": "https://www.gross-ict.ch/#business" }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Server & Storage",
+        "name": "Server- und Storage-Lösungen",
+        "description": "Lokal, in der Cloud oder hybrid — inklusive Backup-Strategie.",
+        "provider": { "@id": "https://www.gross-ict.ch/#business" }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Netzwerk & WLAN",
+        "name": "Netzwerk- und WLAN-Infrastruktur",
+        "description": "Geplante WLAN-Ausleuchtung, Switching, VLANs und sichere Netzwerk-Infrastruktur für KMU.",
+        "provider": { "@id": "https://www.gross-ict.ch/#business" }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "IT-Security",
+        "name": "Security & Firewall",
+        "description": "Endpoint-Security, Firewall und Datenschutz nach revDSG/DSGVO.",
+        "provider": { "@id": "https://www.gross-ict.ch/#business" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was kostet eine Webseite bei Gross ICT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eine Webseite startet als Festpreis bei CHF 1'500 — abhängig von Umfang und Funktionsumfang. Auf rechner.gross-ict.ch konfigurieren Sie Ihre Wunschseite und sehen sofort den Preis."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "In welcher Region ist Gross ICT tätig?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Schwerpunkt ist die Zentralschweiz: Kantone Luzern, Zug, Schwyz, Nidwalden, Obwalden und Uri. Remote-Support und Webprojekte schweizweit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bietet Gross ICT auch IT-Support für bestehende Infrastruktur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Wir übernehmen Remote-Support, Vor-Ort-Service und Wartungsverträge — auch für Infrastruktur, die nicht von uns aufgesetzt wurde."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welche Technologien setzt Gross ICT ein?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Moderne Web-Stacks (Next.js, TypeScript, Tailwind CSS), nativ und Cross-Platform für Mobile-Apps, gängige Server- und Netzwerk-Lösungen sowie Cloud-Plattformen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wer ist hinter Gross ICT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Inhaber und persönlicher Ansprechpartner ist Stefan Gross. Sitz der Firma: Neuhushof 3, 6144 Zell, Kanton Luzern."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie schnell reagiert der Support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In der Regel noch am gleichen Werktag. Per Support-Code sind Sie in unter 30 Sekunden mit einem Techniker verbunden."
+            }
+          }
+        ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".faq__item summary", ".faq__answer"]
+        }
+      },
+      {
+        "@type": "HowTo",
+        "name": "In vier Schritten vom Briefing zum Betrieb",
+        "description": "So läuft jedes Projekt bei Gross ICT — von der ersten Anfrage bis zum laufenden Betrieb.",
+        "totalTime": "P14D",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Briefing", "text": "Wir hören zu — Ziele, Pains, Budget. Im Idealfall vor Ort, mit Espresso." },
+          { "@type": "HowToStep", "position": 2, "name": "Konzept", "text": "Sie erhalten ein konkretes Angebot mit Festpreis, Zeitplan und klaren Lieferobjekten." },
+          { "@type": "HowToStep", "position": 3, "name": "Umsetzung", "text": "Wir bauen, Sie sehen Fortschritte alle paar Tage. Korrekturen sind im Preis inbegriffen." },
+          { "@type": "HowToStep", "position": 4, "name": "Betrieb", "text": "Nach dem Launch sind wir nicht weg — Wartung, Updates, Support, wie es zu Ihnen passt." }
+        ]
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Sieben Disziplinen, vierzig Sekunden — Gross ICT",
+        "description": "Kompakter Überblick über alle ICT-Leistungen von Gross ICT: Webseiten, Web-Apps, Mobile Apps, IT-Support, Netzwerk, Server und Security.",
+        "thumbnailUrl": "https://www.gross-ict.ch/assets/showcase-poster.jpg",
+        "uploadDate": "2024-09-01",
+        "duration": "PT40S",
+        "contentUrl": "https://www.gross-ict.ch/assets/showcase.mp4",
+        "publisher": { "@id": "https://www.gross-ict.ch/#business" },
+        "inLanguage": "de-CH"
+      },
+      {
+        "@type": "Review",
+        "itemReviewed": { "@id": "https://www.gross-ict.ch/#business" },
+        "reviewBody": "Endlich ein Ansprechpartner, der zuhört, bevor er etwas verkauft.",
+        "author": { "@type": "Organization", "name": "Geschäftsleitung, Hotel — Zentralschweiz" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "publisher": { "@id": "https://www.gross-ict.ch/#business" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Speakable specification — wichtig für Voice-Search & AI-Antworten -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.gross-ict.ch/",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero__title", ".hero__sub", ".faq__item summary", ".faq__answer p"]
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -24,7 +352,7 @@
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Hauptnavigation">
-        <a href="index.html" class="brand" aria-label="Gross ICT — Startseite"><img src="assets/logo.png" alt="Gross ICT" class="brand__logo" width="2048" height="329" decoding="async" /></a>
+        <a href="index.html" class="brand" aria-label="Gross ICT — Startseite"><img src="assets/logo.png" alt="Gross ICT — IT-Dienstleister & Webagentur Luzern" class="brand__logo" width="2048" height="329" decoding="async" fetchpriority="high" /></a>
 
         <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü">
           <span class="nav__toggle-bars" aria-hidden="true"></span>
@@ -384,6 +712,79 @@
       </div>
     </section>
 
+    <!-- FAQ — wichtig für Google Rich Results und KI-Suche -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="reveal">
+            <span class="eyebrow">Häufige Fragen</span>
+            <h2 id="faq-title" class="section-head__title mt-4">Antworten,<br />bevor Sie <span class="serif-italic gold-accent">fragen</span>.</h2>
+          </div>
+          <p class="section-head__copy reveal" data-delay="1">
+            Die Fragen, die uns am häufigsten gestellt werden — kurz beantwortet.
+          </p>
+        </header>
+
+        <div class="faq__list reveal" data-delay="2" itemscope itemtype="https://schema.org/FAQPage">
+
+          <details class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Was kostet eine Webseite bei Gross ICT?</summary>
+            <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Eine Webseite startet bei uns ab <strong>CHF 1'500 als Festpreis</strong>. Der genaue Preis hängt von Umfang und Funktionen ab — über unseren <a href="rechner.html">Webseitenrechner</a> erhalten Sie in 2 Minuten einen unverbindlichen Festpreis.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Welche Region deckt Gross ICT ab?</summary>
+            <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Schwerpunkt ist die <strong>Zentralschweiz</strong>: die Kantone Luzern, Zug, Schwyz, Nidwalden, Obwalden und Uri. Vor-Ort-Service primär in der Region rund um Zell, Sursee, Willisau, Hochdorf, Luzern, Zug und Schwyz. Webprojekte und Remote-Support schweizweit.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Bietet Gross ICT auch IT-Support für bestehende Infrastruktur an?</summary>
+            <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Ja. Wir übernehmen <strong>Remote-Support, Vor-Ort-Service und Wartungsverträge</strong> — auch für IT-Infrastruktur, die nicht von uns aufgesetzt wurde. Per Support-Code sind Sie in 30 Sekunden mit einem Techniker verbunden.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Welche Technologien setzt Gross ICT ein?</summary>
+            <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Für Webseiten und Web-Apps: moderne Stacks wie <strong>Next.js, TypeScript, React und Tailwind CSS</strong>. Für Mobile-Apps: native iOS/Android oder Cross-Platform. Für Server, Netzwerk und Security gängige professionelle Lösungen — wir setzen auf das, was zur Aufgabe passt, nicht auf Trends.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Was unterscheidet Gross ICT von grösseren IT-Dienstleistern?</summary>
+            <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Sie haben einen <strong>persönlichen Ansprechpartner</strong> — kein Callcenter, keine wechselnden Account-Manager. Festpreise statt offener Stundenrechnung. Und alle ICT-Disziplinen aus einer Hand: Webseite, App, Server, Netzwerk und Support.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Wie schnell reagiert der Support im Notfall?</summary>
+            <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>In der Regel <strong>noch am gleichen Werktag</strong>. Bei akuten Störungen via Telefon oder Support-Code sofort. Wartungskunden haben definierte Reaktionszeiten gemäss Vertrag.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta">
       <div class="container">
@@ -420,7 +821,7 @@
 
         <div>
           <div class="footer__brand">
-            <img src="assets/logo.png" alt="Gross ICT" class="footer__brand-logo" width="2048" height="329" decoding="async" loading="lazy" />
+            <img src="assets/logo.png" alt="Gross ICT — ICT-Partner für KMU in der Zentralschweiz" class="footer__brand-logo" width="2048" height="329" decoding="async" loading="lazy" />
           </div>
           <p class="footer__intro">Ihr ICT-Partner für KMU in der Zentralschweiz. Webseiten, Apps, Netzwerk und Support — persönlich und aus einer Hand.</p>
         </div>
@@ -443,6 +844,8 @@
           <ul class="footer__list">
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="referenzen.html">Referenzen</a></li>
+            <li><a href="standorte.html">Standorte</a></li>
+            <li><a href="wissen.html">Wissen &amp; Glossar</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>

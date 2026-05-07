@@ -1,0 +1,21 @@
+{
+  "name": "Gross ICT — Digitale Lösungen & ICT für KMU",
+  "short_name": "Gross ICT",
+  "description": "Webseiten, Web-Apps, Mobile Apps, IT-Support, Server, Netzwerk und Security für KMU in der Zentralschweiz.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#121619",
+  "theme_color": "#121619",
+  "lang": "de-CH",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "2048x329",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

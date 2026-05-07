@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Gross ICT</ShortName>
+  <LongName>Gross ICT — Webseiten, Apps, IT-Support für KMU</LongName>
+  <Description>ICT-Partner für KMU in der Zentralschweiz. Webseiten, Apps, Server, Netzwerk und Support.</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image height="32" width="32" type="image/svg+xml">https://www.gross-ict.ch/assets/logo.png</Image>
+  <Url type="text/html" method="get" template="https://www.gross-ict.ch/?s={searchTerms}" />
+  <moz:SearchForm>https://www.gross-ict.ch/</moz:SearchForm>
+  <Language>de-CH</Language>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  <Tags>ict it-support webseite app server kmu luzern zentralschweiz</Tags>
+</OpenSearchDescription>

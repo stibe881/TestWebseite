@@ -1,0 +1,12 @@
+/* TEAM */
+Inhaber & Entwickler: Stefan Gross
+Kontakt: info [at] gross-ict.ch
+Standort: Zell, Luzern, Schweiz
+
+/* SITE */
+Last update: 2026/05/07
+Language: Deutsch (Schweiz)
+Doctype: HTML5
+Standards: WCAG 2.2 AA
+Components: HTML5, CSS3, JavaScript
+Software: Visual Studio Code, Git
