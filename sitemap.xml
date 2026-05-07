@@ -70,6 +70,22 @@
   </url>
 
   <url>
+    <loc>https://www.gross-ict.ch/standorte.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.gross-ict.ch/standorte.html" />
+  </url>
+
+  <url>
+    <loc>https://www.gross-ict.ch/wissen.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.gross-ict.ch/wissen.html" />
+  </url>
+
+  <url>
     <loc>https://www.gross-ict.ch/leistungen.html#webseiten</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>

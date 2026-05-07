@@ -2606,6 +2606,46 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
 }
 
 /* ============================================
+   Breadcrumbs — schlicht, im Design-System
+   ============================================ */
+.breadcrumbs {
+  padding: 1.25rem 0 0;
+  background: var(--surface-base);
+}
+.breadcrumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.breadcrumbs li + li::before {
+  content: "/";
+  color: var(--gold);
+  margin-right: 0.4rem;
+  font-weight: 500;
+}
+.breadcrumbs a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.breadcrumbs a:hover { color: var(--gold-deep); }
+.breadcrumbs li[aria-current] {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ============================================
    FAQ — SEO-optimiert, im Design-System
    ============================================ */
 .faq {

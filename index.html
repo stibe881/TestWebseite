@@ -58,6 +58,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23121619'/%3E%3Cg fill='none' stroke='%23e6b24a' stroke-width='9' stroke-linecap='round'%3E%3Cpath d='M32 18C18 32 18 68 32 82'/%3E%3Cpath d='M68 18C82 32 82 68 68 82'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='4.5' fill='%23e6b24a'/%3E%3C/svg%3E" />
   <link rel="apple-touch-icon" href="assets/logo.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Gross ICT" href="/opensearch.xml" />
 
   <link rel="stylesheet" href="css/style.css" />
 
@@ -290,9 +291,57 @@
               "text": "In der Regel noch am gleichen Werktag. Per Support-Code sind Sie in unter 30 Sekunden mit einem Techniker verbunden."
             }
           }
+        ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".faq__item summary", ".faq__answer"]
+        }
+      },
+      {
+        "@type": "HowTo",
+        "name": "In vier Schritten vom Briefing zum Betrieb",
+        "description": "So läuft jedes Projekt bei Gross ICT — von der ersten Anfrage bis zum laufenden Betrieb.",
+        "totalTime": "P14D",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Briefing", "text": "Wir hören zu — Ziele, Pains, Budget. Im Idealfall vor Ort, mit Espresso." },
+          { "@type": "HowToStep", "position": 2, "name": "Konzept", "text": "Sie erhalten ein konkretes Angebot mit Festpreis, Zeitplan und klaren Lieferobjekten." },
+          { "@type": "HowToStep", "position": 3, "name": "Umsetzung", "text": "Wir bauen, Sie sehen Fortschritte alle paar Tage. Korrekturen sind im Preis inbegriffen." },
+          { "@type": "HowToStep", "position": 4, "name": "Betrieb", "text": "Nach dem Launch sind wir nicht weg — Wartung, Updates, Support, wie es zu Ihnen passt." }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Sieben Disziplinen, vierzig Sekunden — Gross ICT",
+        "description": "Kompakter Überblick über alle ICT-Leistungen von Gross ICT: Webseiten, Web-Apps, Mobile Apps, IT-Support, Netzwerk, Server und Security.",
+        "thumbnailUrl": "https://www.gross-ict.ch/assets/showcase-poster.jpg",
+        "uploadDate": "2024-09-01",
+        "duration": "PT40S",
+        "contentUrl": "https://www.gross-ict.ch/assets/showcase.mp4",
+        "publisher": { "@id": "https://www.gross-ict.ch/#business" },
+        "inLanguage": "de-CH"
+      },
+      {
+        "@type": "Review",
+        "itemReviewed": { "@id": "https://www.gross-ict.ch/#business" },
+        "reviewBody": "Endlich ein Ansprechpartner, der zuhört, bevor er etwas verkauft.",
+        "author": { "@type": "Organization", "name": "Geschäftsleitung, Hotel — Zentralschweiz" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "publisher": { "@id": "https://www.gross-ict.ch/#business" }
       }
     ]
+  }
+  </script>
+
+  <!-- Speakable specification — wichtig für Voice-Search & AI-Antworten -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.gross-ict.ch/",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero__title", ".hero__sub", ".faq__item summary", ".faq__answer p"]
+    }
   }
   </script>
 </head>
@@ -795,6 +844,8 @@
           <ul class="footer__list">
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="referenzen.html">Referenzen</a></li>
+            <li><a href="standorte.html">Standorte</a></li>
+            <li><a href="wissen.html">Wissen &amp; Glossar</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>

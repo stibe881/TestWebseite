@@ -50,11 +50,52 @@
       },
       {
         "@type": "ItemList",
-        "name": "Referenzprojekte",
+        "name": "Referenzprojekte Webentwicklung",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Steinmann Melktechnik" },
-          { "@type": "ListItem", "position": 2, "name": "Ackert Garten" },
-          { "@type": "ListItem", "position": 3, "name": "Die Rollende Pizzeria" }
+          {
+            "@type": "ListItem", "position": 1,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Webseite Gjoni Work",
+              "url": "https://gjoni-work.ch/",
+              "creator": { "@type": "LocalBusiness", "name": "Gross ICT", "url": "https://www.gross-ict.ch/" },
+              "about": "Reinigungs- und Hauswartungsdienste in Emmenbrücke",
+              "image": "https://www.gross-ict.ch/assets/references/gjoni-work.png"
+            }
+          },
+          {
+            "@type": "ListItem", "position": 2,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Webseite Steinmann Melktechnik GmbH",
+              "url": "https://gross-ict.github.io/steinmannmelktechnik/",
+              "creator": { "@type": "LocalBusiness", "name": "Gross ICT", "url": "https://www.gross-ict.ch/" },
+              "about": "Melktechnik-Lösungen, Unternehmenswebsite",
+              "image": "https://www.gross-ict.ch/assets/references/steinmann-melktechnik.jpg"
+            }
+          },
+          {
+            "@type": "ListItem", "position": 3,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Webseite Ackert Garten GmbH",
+              "url": "https://ackert.ch",
+              "creator": { "@type": "LocalBusiness", "name": "Gross ICT", "url": "https://www.gross-ict.ch/" },
+              "about": "Gartenbaubetrieb, SEO und CMS",
+              "image": "https://www.gross-ict.ch/assets/references/ackert-garten.jpg"
+            }
+          },
+          {
+            "@type": "ListItem", "position": 4,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Webseite Die Rollende Pizzeria",
+              "url": "https://gross-ict.github.io/rollendepizzeria.ch/",
+              "creator": { "@type": "LocalBusiness", "name": "Gross ICT", "url": "https://www.gross-ict.ch/" },
+              "about": "Gastronomie, digitale Speisekarte, mobile-first",
+              "image": "https://www.gross-ict.ch/assets/references/rollende-pizzeria.jpg"
+            }
+          }
         ]
       }
     ]
@@ -90,6 +131,15 @@
 
   <main id="main">
 
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Startseite</a></li>
+          <li aria-current="page">Referenzen</li>
+        </ol>
+      </div>
+    </nav>
+
     <section class="page-head">
       <div class="container">
         <div class="page-head__layout">
@@ -112,7 +162,7 @@
 
           <a class="ref-card reveal" href="https://gjoni-work.ch/" target="_blank" rel="noopener">
             <div class="ref-card__visual">
-              <img class="ref-card__img" src="assets/references/gjoni-work.png" alt="Webseite Gjoni Work" loading="lazy" width="800" height="500" style="object-fit: cover; background: #222;" />
+              <img class="ref-card__img" src="assets/references/gjoni-work.png" alt="Webseite Gjoni Work — Reinigung und Hauswartung Emmenbrücke, entwickelt von Gross ICT" loading="lazy" width="800" height="500" style="object-fit: cover; background: #222;" />
             </div>
             <div class="ref-card__client">Gjoni Work</div>
             <h3 class="ref-card__title">Reinigungs- &amp; Hauswartungsdienste</h3>
@@ -131,7 +181,7 @@
           </a>
           <a class="ref-card reveal" href="https://gross-ict.github.io/steinmannmelktechnik/" target="_blank" rel="noopener">
             <div class="ref-card__visual">
-              <img class="ref-card__img" src="assets/references/steinmann-melktechnik.jpg" alt="Webseite Steinmann Melktechnik GmbH" loading="lazy" width="800" height="500" />
+              <img class="ref-card__img" src="assets/references/steinmann-melktechnik.jpg" alt="Webseite Steinmann Melktechnik GmbH — moderne Unternehmenswebsite, Webentwicklung Gross ICT" loading="lazy" width="800" height="500" />
             </div>
             <div class="ref-card__client">Steinmann Melktechnik GmbH</div>
             <h3 class="ref-card__title">Moderne Unternehmens­website</h3>
@@ -151,7 +201,7 @@
 
           <a class="ref-card reveal" data-delay="1" href="https://ackert.ch" target="_blank" rel="noopener">
             <div class="ref-card__visual">
-              <img class="ref-card__img" src="assets/references/ackert-garten.jpg" alt="Webseite Ackert Garten GmbH" loading="lazy" width="800" height="500" />
+              <img class="ref-card__img" src="assets/references/ackert-garten.jpg" alt="Webseite Ackert Garten GmbH — Gartenbau, Webentwicklung mit SEO und CMS von Gross ICT" loading="lazy" width="800" height="500" />
             </div>
             <div class="ref-card__client">Ackert Garten GmbH</div>
             <h3 class="ref-card__title">Digitale Präsenz</h3>
@@ -171,7 +221,7 @@
 
           <a class="ref-card reveal" href="https://gross-ict.github.io/rollendepizzeria.ch/" target="_blank" rel="noopener">
             <div class="ref-card__visual">
-              <img class="ref-card__img" src="assets/references/rollende-pizzeria.jpg" alt="Webseite Die Rollende Pizzeria" loading="lazy" width="800" height="500" />
+              <img class="ref-card__img" src="assets/references/rollende-pizzeria.jpg" alt="Webseite Die Rollende Pizzeria — Speisekarte und mobile-first Webdesign von Gross ICT" loading="lazy" width="800" height="500" />
             </div>
             <div class="ref-card__client">Die Rollende Pizzeria</div>
             <h3 class="ref-card__title">Webseite &amp; Speisekarte</h3>
@@ -249,6 +299,8 @@
             <li><a href="support.html">Support</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="referenzen.html">Referenzen</a></li>
+            <li><a href="standorte.html">Standorte</a></li>
+            <li><a href="wissen.html">Wissen &amp; Glossar</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>
