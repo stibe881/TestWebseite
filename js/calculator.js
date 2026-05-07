@@ -9,7 +9,8 @@
   const monthlyHostingEl = form.querySelector('[data-out-monthly-hosting]');
   const monthlyMaintEl = form.querySelector('[data-out-monthly-maint]');
   const breakdownEl = form.querySelector('[data-out-breakdown]');
-  const ctaEl = form.querySelector('[data-mailto]');
+  
+  let currentCalculation = {};
 
   const fmtChf = (n) => 'CHF ' + n.toLocaleString('de-CH').replace(/,/g, "'");
 
@@ -183,25 +184,15 @@
       breakdownEl.innerHTML = html;
     }
 
-    // mailto link
-    if (ctaEl) {
-      const lines = [
-        'Konfiguration aus dem Webseitenrechner:',
-        '',
-        `Kundentyp: ${customerLabel}` + (discountPct > 0 ? ` (−${discountPct} %)` : ''),
-        '',
-        ...items.map((it) => `• ${it.label}: ${fmtChf(it.price)}`),
-        '',
-        `Festpreis: ${fmtChf(total)}`,
-        `Hosting monatlich: ${fmtChf(monthlyHosting)}`,
-        `Wartung monatlich: ${fmtChf(monthlyMaint)}`,
-        '',
-        'Bitte senden Sie mir ein verbindliches Angebot.',
-      ];
-      const body = lines.join('\n');
-      const subject = `[Rechner] Konfiguration ${fmtChf(total)}`;
-      ctaEl.href = 'mailto:info@gross-ict.ch?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    }
+    // Speichere die aktuelle Berechnung für den AJAX Request
+    currentCalculation = {
+      customerLabel,
+      discountPct,
+      items,
+      total,
+      monthlyHosting,
+      monthlyMaint
+    };
   }
 
   function escapeHtml(str) {
@@ -231,4 +222,72 @@
 
   // Initial paint
   compute();
+
+  // Quote Request Logic
+  const btnShowEmailForm = document.getElementById('btn-show-email-form');
+  const quoteEmailForm = document.getElementById('quote-email-form');
+  const btnSubmitQuote = document.getElementById('btn-submit-quote');
+  const quoteEmailInput = document.getElementById('quote-email-input');
+  const quoteFormStatus = document.getElementById('quote-form-status');
+  const quoteActions = document.getElementById('quote-actions');
+
+  if (btnShowEmailForm && quoteEmailForm) {
+    btnShowEmailForm.addEventListener('click', () => {
+      quoteActions.style.display = 'none';
+      quoteEmailForm.style.display = 'block';
+      quoteEmailInput.focus();
+    });
+  }
+
+  if (btnSubmitQuote && quoteEmailInput) {
+    btnSubmitQuote.addEventListener('click', async () => {
+      const email = quoteEmailInput.value.trim();
+      
+      if (!email || !email.includes('@')) {
+        quoteFormStatus.style.display = 'block';
+        quoteFormStatus.style.color = '#EF4444';
+        quoteFormStatus.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+        return;
+      }
+
+      // Button state
+      const originalText = btnSubmitQuote.innerHTML;
+      btnSubmitQuote.disabled = true;
+      btnSubmitQuote.innerHTML = 'Wird gesendet...';
+      quoteFormStatus.style.display = 'none';
+
+      try {
+        const formData = new URLSearchParams();
+        formData.append('email', email);
+        formData.append('calculation', JSON.stringify(currentCalculation));
+
+        const response = await fetch('create_quote_request.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: formData.toString()
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          quoteFormStatus.style.display = 'block';
+          quoteFormStatus.style.color = '#10B981';
+          quoteFormStatus.textContent = result.success || 'Vielen Dank! Ihre Anfrage wurde gesendet.';
+          quoteEmailInput.value = '';
+          btnSubmitQuote.style.display = 'none';
+          quoteEmailInput.style.display = 'none';
+        } else {
+          throw new Error(result.error || 'Ein Fehler ist aufgetreten.');
+        }
+      } catch (err) {
+        quoteFormStatus.style.display = 'block';
+        quoteFormStatus.style.color = '#EF4444';
+        quoteFormStatus.textContent = err.message;
+        btnSubmitQuote.disabled = false;
+        btnSubmitQuote.innerHTML = originalText;
+      }
+    });
+  }
 })();

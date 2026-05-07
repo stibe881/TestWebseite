@@ -275,12 +275,24 @@
                 <!-- gefüllt durch JS -->
               </ul>
 
-              <div class="calc-summary__actions">
-                <a class="btn btn--gold calc-summary__cta" href="#" data-mailto>
+              <div class="calc-summary__actions" id="quote-actions">
+                <button type="button" class="btn btn--gold calc-summary__cta" id="btn-show-email-form">
                   Festpreis-Angebot anfordern
                   <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                </a>
+                </button>
                 <a class="btn btn--ghost" href="tel:+41415623416">+41 41 562 34 16</a>
+              </div>
+
+              <div id="quote-email-form" style="display: none; margin-top: 1.5rem; text-align: left; background: var(--bg-card); border-radius: 0.5rem; border: 1px solid var(--border); padding: 1.25rem;">
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Bitte geben Sie Ihre E-Mail-Adresse ein. Sie erhalten das Angebot umgehend zugesendet und wir melden uns innert 2 Arbeitstagen persönlich bei Ihnen.</p>
+                <div style="margin-bottom: 1rem;">
+                  <input type="email" id="quote-email-input" placeholder="ihre@email.ch" required style="width: 100%; padding: 0.75rem 1rem; border-radius: 0.375rem; border: 1px solid var(--border); background: var(--bg-body); color: var(--text-base); font-family: inherit; font-size: 1rem;" />
+                </div>
+                <button type="button" class="btn btn--gold" id="btn-submit-quote" style="width: 100%; justify-content: center;">
+                  Jetzt anfordern
+                  <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+                <div id="quote-form-status" style="margin-top: 0.75rem; font-size: 0.875rem; display: none;"></div>
               </div>
 
               <p class="calc-summary__note">
