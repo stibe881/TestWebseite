@@ -90,14 +90,6 @@ if ($curlError) {
 }
 
 if ($httpCode >= 200 && $httpCode < 300) {
-    // Also send a notification email
-    $to = "info@gross-ict.ch";
-    $email_subject = "[Support-Ticket] $title";
-    $headers = "From: Webseite <info@gross-ict.ch>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-    mail($to, $email_subject, $description, $headers, "-f$to");
-
     http_response_code(200);
     echo json_encode(["success" => "Vielen Dank! Ihr Support-Ticket wurde erfolgreich erstellt. Wir melden uns in Kürze bei Ihnen."]);
 } else {
