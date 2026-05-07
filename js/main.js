@@ -59,20 +59,19 @@
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // ---- Contact form: client-side validation + mailto fallback ----
+  // ---- Contact form: AJAX submission ----
   const form = document.querySelector('[data-contact-form]');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const fd = new FormData(form);
       const name = (fd.get('name') || '').toString().trim();
       const email = (fd.get('email') || '').toString().trim();
-      const subject = (fd.get('subject') || 'Anfrage über Webseite').toString().trim();
       const message = (fd.get('message') || '').toString().trim();
-      const company = (fd.get('company') || '').toString().trim();
-      const phone = (fd.get('phone') || '').toString().trim();
 
       const status = form.querySelector('[data-form-status]');
+      const btn = form.querySelector('button[type="submit"]');
+
       if (!name || !email || !message) {
         if (status) {
           status.textContent = 'Bitte füllen Sie alle Pflichtfelder aus.';
@@ -81,25 +80,93 @@
         return;
       }
 
-      const body = [
-        'Name: ' + name,
-        'E-Mail: ' + email,
-        company ? 'Firma: ' + company : '',
-        phone ? 'Telefon: ' + phone : '',
-        '',
-        'Nachricht:',
-        message,
-      ].filter(Boolean).join('\n');
+      if (status) {
+        status.textContent = 'Wird gesendet...';
+        status.style.color = 'inherit';
+      }
+      if (btn) btn.disabled = true;
 
-      const mailto = 'mailto:info@gross-ict.ch'
-        + '?subject=' + encodeURIComponent('[Webseite] ' + subject)
-        + '&body=' + encodeURIComponent(body);
+      try {
+        const response = await fetch('send_mail.php', {
+          method: 'POST',
+          body: fd
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          if (status) {
+            status.textContent = data.success || 'Ihre Anfrage wurde erfolgreich gesendet.';
+            status.style.color = '#4caf50'; // Green success color
+          }
+          form.reset();
+        } else {
+          throw new Error(data.error || 'Fehler beim Senden.');
+        }
+      } catch (err) {
+        if (status) {
+          status.textContent = err.message || 'Beim Senden ist ein Fehler aufgetreten.';
+          status.style.color = '#e53935'; // Red error color
+        }
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    });
+  }
+
+  // ---- Ticket form: AJAX submission to CRM ----
+  const ticketForm = document.querySelector('[data-ticket-form]');
+  if (ticketForm) {
+    ticketForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(ticketForm);
+      const firstname = (fd.get('firstname') || '').toString().trim();
+      const lastname = (fd.get('lastname') || '').toString().trim();
+      const email = (fd.get('email') || '').toString().trim();
+      const message = (fd.get('message') || '').toString().trim();
+
+      const status = ticketForm.querySelector('[data-ticket-status]');
+      const btn = ticketForm.querySelector('button[type="submit"]');
+
+      if (!firstname || !lastname || !email || !message) {
+        if (status) {
+          status.textContent = 'Bitte füllen Sie alle Pflichtfelder aus.';
+          status.style.color = '#c8943a';
+        }
+        return;
+      }
 
       if (status) {
-        status.textContent = 'E-Mail-Programm wird geöffnet …';
-        status.style.color = '#1f2429';
+        status.textContent = 'Ticket wird erstellt...';
+        status.style.color = 'inherit';
       }
-      window.location.href = mailto;
+      if (btn) btn.disabled = true;
+
+      try {
+        const response = await fetch('create_ticket.php', {
+          method: 'POST',
+          body: fd
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          if (status) {
+            status.textContent = data.success || 'Ihr Ticket wurde erfolgreich erstellt.';
+            status.style.color = '#4caf50';
+          }
+          ticketForm.reset();
+        } else {
+          throw new Error(data.error || 'Fehler beim Erstellen des Tickets.');
+        }
+      } catch (err) {
+        if (status) {
+          status.textContent = err.message || 'Beim Erstellen des Tickets ist ein Fehler aufgetreten.';
+          status.style.color = '#e53935';
+        }
+      } finally {
+        if (btn) btn.disabled = false;
+      }
     });
   }
 

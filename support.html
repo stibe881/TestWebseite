@@ -66,7 +66,7 @@
             <h2 class="ticket-card__title">Ticket erstellen</h2>
             <p class="ticket-card__desc">Beschreiben Sie Ihr Problem – wir kümmern uns darum.</p>
 
-            <form class="form" data-contact-form novalidate>
+            <form class="form" data-ticket-form novalidate>
               <div class="form__row">
                 <div class="field">
                   <label for="firma">Firma</label>
@@ -114,10 +114,13 @@
                 <span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung gespeichert werden.</span>
               </label>
 
-              <button class="btn btn--gold ticket-card__btn" type="submit">
-                Ticket erstellen
-                <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </button>
+              <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+                <button class="btn btn--gold ticket-card__btn" type="submit">
+                  Ticket erstellen
+                  <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+                <span data-ticket-status style="font-size: 0.875rem;"></span>
+              </div>
             </form>
           </div>
         </div>
