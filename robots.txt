@@ -1,0 +1,74 @@
+# robots.txt für Gross ICT — https://www.gross-ict.ch
+# Erlaubt allen seriösen Crawlern den vollständigen Zugriff
+# inkl. KI-Crawlern (ChatGPT, Perplexity, Google AI, Claude, etc.)
+
+User-agent: *
+Allow: /
+Disallow: /support_live.html
+Disallow: /support_live_utf8.html
+Disallow: /next-app/
+Disallow: /remotion-showcase/
+
+# KI / LLM Crawler explizit zulassen (für AI-Search-Sichtbarkeit)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+# Sitemap
+Sitemap: https://www.gross-ict.ch/sitemap.xml
+
+# Host-Direktive (legacy, ignoriert von Google, akzeptiert von Yandex)
+Host: https://www.gross-ict.ch

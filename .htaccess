@@ -1,0 +1,101 @@
+# ============================================================
+# Gross ICT — .htaccess (Apache)
+# Performance, Security, SEO-Canonicals
+# ============================================================
+
+# --- Standard-Verhalten -----------------------------------
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTPS erzwingen
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # www erzwingen (canonical host)
+  RewriteCond %{HTTP_HOST} ^gross-ict\.ch$ [NC]
+  RewriteRule ^(.*)$ https://www.gross-ict.ch/$1 [R=301,L]
+
+  # Trailing-Slash bei Verzeichnissen entfernen (nicht index)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+  # /index.html → /
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
+
+# --- Charset ----------------------------------------------
+AddDefaultCharset utf-8
+
+# --- Compression (Gzip/Brotli) ----------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/xml+rss application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml font/woff2 font/woff application/font-woff2
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# --- Browser-Caching --------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                              "access plus 1 month"
+  ExpiresByType text/html                     "access plus 0 seconds"
+  ExpiresByType text/xml                      "access plus 0 seconds"
+  ExpiresByType application/xml               "access plus 0 seconds"
+  ExpiresByType application/json              "access plus 0 seconds"
+  ExpiresByType application/manifest+json     "access plus 1 week"
+  ExpiresByType text/cache-manifest           "access plus 0 seconds"
+  ExpiresByType text/css                      "access plus 1 year"
+  ExpiresByType application/javascript        "access plus 1 year"
+  ExpiresByType text/javascript               "access plus 1 year"
+  ExpiresByType image/jpeg                    "access plus 6 months"
+  ExpiresByType image/png                     "access plus 6 months"
+  ExpiresByType image/webp                    "access plus 6 months"
+  ExpiresByType image/avif                    "access plus 6 months"
+  ExpiresByType image/svg+xml                 "access plus 6 months"
+  ExpiresByType image/x-icon                  "access plus 1 year"
+  ExpiresByType video/mp4                     "access plus 6 months"
+  ExpiresByType font/woff2                    "access plus 1 year"
+  ExpiresByType font/woff                     "access plus 1 year"
+  ExpiresByType application/font-woff2        "access plus 1 year"
+</IfModule>
+
+# --- Security-Header --------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+
+  # Cache-Control feinjustieren
+  <FilesMatch "\.(html|xml|json)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|woff2|woff|jpg|jpeg|png|webp|avif|svg|ico|mp4)$">
+    Header set Cache-Control "public, max-age=15552000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# --- MIME-Types -------------------------------------------
+<IfModule mod_mime.c>
+  AddType application/manifest+json     webmanifest
+  AddType image/svg+xml                 svg svgz
+  AddType image/webp                    webp
+  AddType image/avif                    avif
+  AddType font/woff2                    woff2
+  AddType text/cache-manifest           appcache
+  AddType application/x-web-app-manifest+json  webapp
+  AddCharset utf-8 .html .css .js .json .xml .svg .webmanifest .txt
+</IfModule>
+
+# --- Custom 404 -------------------------------------------
+ErrorDocument 404 /index.html
