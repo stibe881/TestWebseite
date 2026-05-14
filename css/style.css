@@ -2604,3 +2604,8 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
     max-width: none;
   }
 }
+
+/* Expandable descriptions for calc-options */
+.calc-option input:not(:checked) ~ .calc-option__body .calc-option__sub--expandable { display: none; }
+.calc-option input:checked ~ .calc-option__body .calc-option__sub--expandable { display: block; animation: fadeInDown 0.3s ease-out forwards; }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }

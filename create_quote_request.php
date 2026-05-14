@@ -56,7 +56,7 @@ if (!empty($calculation)) {
     
     $emailContent .= "\n";
     $emailContent .= "Festpreis (einmalig): " . $fmtChf($calculation['total'] ?? 0) . "\n";
-    $emailContent .= "Hosting monatlich: " . $fmtChf($calculation['monthlyHosting'] ?? 0) . "\n";
+    $emailContent .= "Hosting jährlich: " . $fmtChf($calculation['yearlyHosting'] ?? 0) . "\n";
     $emailContent .= "Wartung monatlich: " . $fmtChf($calculation['monthlyMaint'] ?? 0) . "\n\n";
 }
 
@@ -105,7 +105,7 @@ if (isset($calculation['items']) && is_array($calculation['items'])) {
         $notes .= "- " . $item['label'] . ": " . $fmtChf($item['price']) . "\n";
     }
 }
-$notes .= "\nHosting monatlich: " . $fmtChf($calculation['monthlyHosting'] ?? 0);
+$notes .= "\nHosting jährlich: " . $fmtChf($calculation['yearlyHosting'] ?? 0);
 $notes .= "\nWartung monatlich: " . $fmtChf($calculation['monthlyMaint'] ?? 0);
 
 // Subtotal & Total
@@ -114,7 +114,28 @@ $total = floatval($calculation['total'] ?? 0);
 $subtotal = round($total / 1.081, 2);
 $tax = $total - $subtotal;
 
-// B) Insert Quote
+// B) Check if customer exists by email
+$chCustomer = curl_init("$supabaseUrl/rest/v1/customers?select=id&email=eq." . urlencode($email) . "&limit=1");
+curl_setopt_array($chCustomer, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPGET => true,
+    CURLOPT_HTTPHEADER => [
+        "apikey: $supabaseKey",
+        "Authorization: Bearer $supabaseKey"
+    ]
+]);
+$customerRes = curl_exec($chCustomer);
+curl_close($chCustomer);
+
+$customerId = null;
+if ($customerRes) {
+    $customerData = json_decode($customerRes, true);
+    if (!empty($customerData) && isset($customerData[0]['id'])) {
+        $customerId = $customerData[0]['id'];
+    }
+}
+
+// C) Insert Quote
 $quoteData = [
     "quote_number" => $newQuoteNumber,
     "quote_date" => date("Y-m-d"),
@@ -125,6 +146,10 @@ $quoteData = [
     "tax" => $tax,
     "total" => $total
 ];
+
+if ($customerId) {
+    $quoteData["customer_id"] = $customerId;
+}
 
 $chInsert = curl_init("$supabaseUrl/rest/v1/quotes");
 curl_setopt_array($chInsert, [
@@ -144,6 +169,77 @@ curl_close($chInsert);
 
 // 3. Send Push Notification via Edge Function
 if ($httpCode >= 200 && $httpCode < 300) {
+    // B.2) Insert Quote Items
+    $insertedQuotes = json_decode($insertRes, true);
+    if (!empty($insertedQuotes) && isset($insertedQuotes[0]['id'])) {
+        $quoteId = $insertedQuotes[0]['id'];
+        
+        $quoteItems = [];
+        if (isset($calculation['items']) && is_array($calculation['items'])) {
+            foreach ($calculation['items'] as $item) {
+                $price = floatval($item['price']);
+                $unitPrice = round($price / 1.081, 2);
+                $quoteItems[] = [
+                    "quote_id" => $quoteId,
+                    "description" => $item['label'],
+                    "quantity" => 1,
+                    "unit" => "Psch.",
+                    "unit_price" => $unitPrice,
+                    "total" => $unitPrice,
+                    "vat_rate" => 8.1,
+                    "optional" => false
+                ];
+            }
+        }
+        
+        $yearlyHosting = floatval($calculation['yearlyHosting'] ?? 0);
+        if ($yearlyHosting > 0) {
+            $hUnitPrice = round($yearlyHosting / 1.081, 2);
+            $quoteItems[] = [
+                "quote_id" => $quoteId,
+                "description" => "Hosting jährlich",
+                "quantity" => 1,
+                "unit" => "Jahr",
+                "unit_price" => $hUnitPrice,
+                "total" => $hUnitPrice,
+                "vat_rate" => 8.1,
+                "optional" => false
+            ];
+        }
+
+        $monthlyMaint = floatval($calculation['monthlyMaint'] ?? 0);
+        if ($monthlyMaint > 0) {
+            $mUnitPrice = round($monthlyMaint / 1.081, 2);
+            $quoteItems[] = [
+                "quote_id" => $quoteId,
+                "description" => "Wartung monatlich",
+                "quantity" => 1,
+                "unit" => "Mt.",
+                "unit_price" => $mUnitPrice,
+                "total" => $mUnitPrice,
+                "vat_rate" => 8.1,
+                "optional" => false
+            ];
+        }
+
+        if (!empty($quoteItems)) {
+            $chItems = curl_init("$supabaseUrl/rest/v1/quote_items");
+            curl_setopt_array($chItems, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => json_encode($quoteItems),
+                CURLOPT_HTTPHEADER => [
+                    "Content-Type: application/json",
+                    "apikey: $supabaseKey",
+                    "Authorization: Bearer $supabaseKey",
+                    "Prefer: return=minimal"
+                ]
+            ]);
+            curl_exec($chItems);
+            curl_close($chItems);
+        }
+    }
+
     $pushData = [
         "recipients" => "all_admins",
         "recipientType" => "admin",

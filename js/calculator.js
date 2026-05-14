@@ -6,7 +6,7 @@
   if (!form) return;
 
   const totalEl = form.querySelector('[data-out-total]');
-  const monthlyHostingEl = form.querySelector('[data-out-monthly-hosting]');
+  const yearlyHostingEl = form.querySelector('[data-out-yearly-hosting]');
   const monthlyMaintEl = form.querySelector('[data-out-monthly-maint]');
   const breakdownEl = form.querySelector('[data-out-breakdown]');
   
@@ -58,17 +58,24 @@
     // Language stepper hint
     const langInput = form.querySelector('input[name="languages"]');
     if (langInput) {
-      const each = Number(langInput.dataset.extraEach) || 0;
-      const discounted = applyDiscount(each, discount);
+      const customerInput = form.querySelector('input[name="customer"]:checked');
+      const customerValue = customerInput ? customerInput.value : 'unternehmen';
+      
+      let baseEach = Number(langInput.dataset.extraEach) || 0;
+      if (customerValue === 'wedding') {
+        baseEach = 100;
+      }
+
+      const discounted = applyDiscount(baseEach, discount);
       const hintEl = langInput.parentElement.querySelector('.calc-stepper__hint');
       if (hintEl) hintEl.innerHTML = 'Erste Sprache inklusive &middot; jede weitere +&nbsp;' + fmtChf(discounted);
     }
 
     // Hosting radio prices (no discount)
-    form.querySelectorAll('input[name="hosting"][data-monthly]').forEach((input) => {
-      const baseMonthly = Number(input.dataset.monthly);
+    form.querySelectorAll('input[name="hosting"][data-yearly]').forEach((input) => {
+      const baseYearly = Number(input.dataset.yearly);
       const priceEl = input.parentElement.querySelector('.calc-option__price');
-      if (priceEl) priceEl.textContent = fmtChf(baseMonthly) + '\u00a0/\u00a0Mt.';
+      if (priceEl) priceEl.textContent = fmtChf(baseYearly) + '\u00a0/\u00a0Jahr';
     });
 
     // Maintenance radio prices (discount applies)
@@ -83,7 +90,7 @@
   function compute() {
     const items = [];
     let total = 0;
-    let monthlyHosting = 0;
+    let yearlyHosting = 0;
     let monthlyMaint = 0;
 
     // Customer type & discount
@@ -109,6 +116,70 @@
       }
     }
 
+    // Toggle Wedding vs Standard options
+    const stdOptions = document.getElementById('options-standard');
+    const wedOptions = document.getElementById('options-wedding');
+
+    if (stdOptions && wedOptions) {
+      if (customerValue === 'wedding') {
+        stdOptions.style.display = 'none';
+        wedOptions.style.display = '';
+        
+        // Ensure a wedding option is checked, and uncheck standard options
+        const wedChecked = wedOptions.querySelector('input[name="type"]:checked');
+        if (!wedChecked) {
+          const defaultWed = wedOptions.querySelector('input[name="type"][value="wedding-premium"]');
+          if (defaultWed) defaultWed.checked = true;
+        }
+        // Uncheck all standard options so we only have one value for "type"
+        stdOptions.querySelectorAll('input[name="type"]').forEach(r => r.checked = false);
+      } else {
+        stdOptions.style.display = '';
+        wedOptions.style.display = 'none';
+        
+        // Ensure a standard option is checked, and uncheck wedding options
+        const stdChecked = stdOptions.querySelector('input[name="type"]:checked');
+        if (!stdChecked) {
+          const defaultStd = stdOptions.querySelector('input[name="type"][value="landing"]');
+          if (defaultStd) defaultStd.checked = true;
+        }
+        // Uncheck all wedding options
+        wedOptions.querySelectorAll('input[name="type"]').forEach(r => r.checked = false);
+      }
+    }
+
+    // Toggle Wedding vs Standard addons and groups
+    const stdAddons = document.getElementById('addons-standard');
+    const wedAddons = document.getElementById('addons-wedding');
+    const groupHosting = document.getElementById('group-hosting');
+    const groupMaint = document.getElementById('group-maint');
+    const summaryHosting = document.getElementById('summary-hosting');
+    const summaryMaint = document.getElementById('summary-maint');
+
+    if (stdAddons && wedAddons) {
+      if (customerValue === 'wedding') {
+        stdAddons.style.display = 'none';
+        wedAddons.style.display = '';
+        if (groupHosting) groupHosting.style.display = 'none';
+        if (groupMaint) groupMaint.style.display = 'none';
+        if (summaryHosting) summaryHosting.style.display = 'none';
+        if (summaryMaint) summaryMaint.style.display = 'none';
+        
+        // Uncheck all standard addons
+        stdAddons.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = false);
+      } else {
+        stdAddons.style.display = '';
+        wedAddons.style.display = 'none';
+        if (groupHosting) groupHosting.style.display = '';
+        if (groupMaint) groupMaint.style.display = '';
+        if (summaryHosting) summaryHosting.style.display = '';
+        if (summaryMaint) summaryMaint.style.display = '';
+        
+        // Uncheck all wedding addons
+        wedAddons.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = false);
+      }
+    }
+
     // Update all visible prices in the form
     updateDisplayedPrices(discount);
 
@@ -125,7 +196,13 @@
     const langInput = form.querySelector('input[name="languages"]');
     if (langInput) {
       const count = Math.max(1, Number(langInput.value) || 1);
-      const each = applyDiscount(Number(langInput.dataset.extraEach) || 0, discount);
+      
+      let baseEach = Number(langInput.dataset.extraEach) || 0;
+      if (customerValue === 'wedding') {
+        baseEach = 100;
+      }
+
+      const each = applyDiscount(baseEach, discount);
       const from = Number(langInput.dataset.extraFrom) || 2;
       const extra = Math.max(0, count - (from - 1));
       if (extra > 0) {
@@ -143,15 +220,15 @@
       items.push({ label: titleEl ? titleEl.textContent.trim() : 'Option', price });
     });
 
-    // Hosting (radio with data-monthly)
+    // Hosting (radio with data-yearly)
     const hostingInput = form.querySelector('input[name="hosting"]:checked');
-    if (hostingInput) {
-      monthlyHosting = Number(hostingInput.dataset.monthly) || 0;
+    if (hostingInput && customerValue !== 'wedding') {
+      yearlyHosting = Number(hostingInput.dataset.yearly) || 0;
     }
 
     // Maintenance (radio with data-monthly)
     const maintInput = form.querySelector('input[name="maint"]:checked');
-    if (maintInput) {
+    if (maintInput && customerValue !== 'wedding') {
       monthlyMaint = applyDiscount(Number(maintInput.dataset.monthly) || 0, discount);
     }
 
@@ -160,7 +237,7 @@
 
     // Render
     if (totalEl) totalEl.textContent = fmtChf(total);
-    if (monthlyHostingEl) monthlyHostingEl.textContent = fmtChf(monthlyHosting);
+    if (yearlyHostingEl) yearlyHostingEl.textContent = fmtChf(yearlyHosting);
     if (monthlyMaintEl) monthlyMaintEl.textContent = fmtChf(monthlyMaint);
 
     if (breakdownEl) {
@@ -190,7 +267,7 @@
       discountPct,
       items,
       total,
-      monthlyHosting,
+      yearlyHosting,
       monthlyMaint
     };
   }
