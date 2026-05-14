@@ -124,6 +124,47 @@
               </div>
             </fieldset>
 
+            <!-- Wedding Examples Preview (hidden by default) -->
+            <div class="wedding-preview" id="wedding-preview" style="display: none;">
+              <div class="wedding-preview__header">
+                <svg class="wedding-preview__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <span>Beispiele unserer Hochzeitswebseiten</span>
+              </div>
+              <div class="wedding-preview__cards">
+                <a href="https://wedding.temp-gross-ict.ch/example-basic.html" target="_blank" rel="noopener" class="wedding-preview__card">
+                  <div class="wedding-preview__card-badge">Basic</div>
+                  <div class="wedding-preview__card-title">Save the Date</div>
+                  <div class="wedding-preview__card-desc">Einfacher One-Pager mit Countdown &amp; RSVP</div>
+                  <span class="wedding-preview__card-link">
+                    Beispiel ansehen
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </span>
+                </a>
+                <a href="https://wedding.temp-gross-ict.ch/example-premium.html" target="_blank" rel="noopener" class="wedding-preview__card wedding-preview__card--featured">
+                  <div class="wedding-preview__card-badge">Premium ✦</div>
+                  <div class="wedding-preview__card-title">Der große Tag</div>
+                  <div class="wedding-preview__card-desc">Mehrseitig mit Timeline, Maps &amp; erweitertem RSVP</div>
+                  <span class="wedding-preview__card-link">
+                    Beispiel ansehen
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </span>
+                </a>
+                <a href="https://wedding.temp-gross-ict.ch/example-deluxe.html" target="_blank" rel="noopener" class="wedding-preview__card">
+                  <div class="wedding-preview__card-badge">Deluxe</div>
+                  <div class="wedding-preview__card-title">Für die Ewigkeit</div>
+                  <div class="wedding-preview__card-desc">Passwortschutz, Galerie &amp; digitale Dankeskarte</div>
+                  <span class="wedding-preview__card-link">
+                    Beispiel ansehen
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </span>
+                </a>
+              </div>
+              <a href="https://wedding.temp-gross-ict.ch/" target="_blank" rel="noopener" class="wedding-preview__all-link">
+                Alle Beispiele entdecken
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+
             <fieldset class="calc-group reveal" data-delay="1">
               <legend class="calc-group__legend"><span class="calc-group__num">02</span> Welche Art von Webseite?</legend>
               <div class="calc-options" role="radiogroup" aria-label="Projekttyp" id="options-standard">
@@ -290,6 +331,18 @@
 
               <div class="calc-checks" id="addons-wedding" style="display: none;">
                 <label class="calc-check">
+                  <input type="checkbox" name="domain" data-price="80" />
+                  <span class="calc-check__title">Eigene .ch-Wunschdomain</span>
+                  <span class="calc-check__price">+&nbsp;CHF&nbsp;80</span>
+                  <span class="calc-check__sub">Als Zusatzleistung, damit sie nicht hochzeit.gross-ict.ch/anna-paul heissen, sondern www.anna-und-paul-heiraten.ch.</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" name="logo_wedding" data-price="350" />
+                  <span class="calc-check__title">Individuelles Logo / Monogramm (Branding)</span>
+                  <span class="calc-check__price">+&nbsp;CHF&nbsp;350</span>
+                  <span class="calc-check__sub">Gestaltung eines Hochzeitslogos (die Initialen des Paares), welches für die Webseite, aber auch für Servietten, Stempel und Einladungen verwendet werden kann.</span>
+                </label>
+                <label class="calc-check">
                   <input type="checkbox" name="digital_invite" data-price="250" />
                   <span class="calc-check__title">Digitales Save-the-Date &amp; Einladungs-Mailing</span>
                   <span class="calc-check__price">+&nbsp;CHF&nbsp;250</span>
@@ -302,28 +355,22 @@
                   <span class="calc-check__sub">Wunderschöne QR-Codes passend zum Hochzeitsdesign (z.B. in Gold oder mit den Initialen), die das Paar auf ihre Menükarten oder Willkommensschilder drucken lassen kann.</span>
                 </label>
                 <label class="calc-check">
-                  <input type="checkbox" name="logo_wedding" data-price="350" />
-                  <span class="calc-check__title">Individuelles Logo / Monogramm (Branding)</span>
-                  <span class="calc-check__price">+&nbsp;CHF&nbsp;350</span>
-                  <span class="calc-check__sub">Gestaltung eines Hochzeitslogos (die Initialen des Paares), welches für die Webseite, aber auch für Servietten, Stempel und Einladungen verwendet werden kann.</span>
-                </label>
-                <label class="calc-check">
-                  <input type="checkbox" name="spotify" data-price="100" />
-                  <span class="calc-check__title">Spotify Playlist Wunschkonzert</span>
-                  <span class="calc-check__price">+&nbsp;CHF&nbsp;100</span>
-                  <span class="calc-check__sub">Ein Formular auf der Seite, bei dem Gäste schon vorab Liederwünsche für den DJ einreichen können. Diese fließen automatisch in eine Spotify-Playlist.</span>
-                </label>
-                <label class="calc-check">
-                  <input type="checkbox" name="domain" data-price="80" />
-                  <span class="calc-check__title">Eigene .ch-Wunschdomain</span>
-                  <span class="calc-check__price">+&nbsp;CHF&nbsp;80</span>
-                  <span class="calc-check__sub">Als Zusatzleistung, damit sie nicht hochzeit.gross-ict.ch/anna-paul heissen, sondern www.anna-und-paul-heiraten.ch.</span>
+                  <input type="checkbox" name="management" data-price="250" />
+                  <span class="calc-check__title">Verwaltung (Backend)</span>
+                  <span class="calc-check__price">+&nbsp;CHF&nbsp;250</span>
+                  <span class="calc-check__sub">Einfaches Backend zur Verwaltung von Gästeliste, Zu-/Absagen (RSVP), Allergien und weiteren Anmeldungen.</span>
                 </label>
                 <label class="calc-check">
                   <input type="checkbox" name="seating" data-price="200" />
                   <span class="calc-check__title">Sitzplan / Tischordnung (Interaktiv)</span>
                   <span class="calc-check__price">+&nbsp;CHF&nbsp;200</span>
                   <span class="calc-check__sub">Ein schöner, interaktiver Sitzplan, auf dem die Gäste schauen können, an welchem Tisch sie sitzen (wird meist erst kurz vor der Hochzeit freigeschaltet).</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" name="spotify" data-price="100" />
+                  <span class="calc-check__title">Spotify Playlist Wunschkonzert</span>
+                  <span class="calc-check__price">+&nbsp;CHF&nbsp;100</span>
+                  <span class="calc-check__sub">Ein Formular auf der Seite, bei dem Gäste schon vorab Liederwünsche für den DJ einreichen können. Diese fließen automatisch in eine Spotify-Playlist.</span>
                 </label>
               </div>
             </fieldset>

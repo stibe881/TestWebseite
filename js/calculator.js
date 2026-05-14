@@ -11,6 +11,37 @@
   const breakdownEl = form.querySelector('[data-out-breakdown]');
   
   let currentCalculation = {};
+  let previousCustomerValue = 'unternehmen';
+
+  function triggerHeartExplosion(sourceEl) {
+    const rect = sourceEl.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    
+    const count = 15 + Math.random() * 10;
+    for (let i = 0; i < count; i++) {
+      const heart = document.createElement('div');
+      heart.textContent = '❤️';
+      heart.className = 'heart-particle';
+      
+      const angle = Math.random() * Math.PI * 2;
+      const velocity = 60 + Math.random() * 140;
+      const tx = Math.cos(angle) * velocity;
+      const ty = Math.sin(angle) * velocity - 60; // slight upward bias
+      
+      heart.style.setProperty('--tx', `${tx}px`);
+      heart.style.setProperty('--ty', `${ty}px`);
+      heart.style.setProperty('--rot', `${(Math.random() - 0.5) * 180}deg`);
+      
+      heart.style.left = `${x}px`;
+      heart.style.top = `${y}px`;
+      
+      heart.style.animationDuration = `${0.6 + Math.random() * 0.4}s`;
+      
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 1200);
+    }
+  }
 
   const fmtChf = (n) => 'CHF ' + n.toLocaleString('de-CH').replace(/,/g, "'");
 
@@ -99,6 +130,13 @@
     const discount = getDiscount();
     const customerLabel = getCustomerLabel();
 
+    // Trigger Heart Explosion if changing to 'wedding'
+    if (customerValue === 'wedding' && previousCustomerValue !== 'wedding') {
+      const sourceEl = customerInput.closest('.calc-option') || customerInput;
+      triggerHeartExplosion(sourceEl);
+    }
+    previousCustomerValue = customerValue;
+
     // Hide E-Commerce option for Privatperson
     const shopLabel = form.querySelector('input[name="type"][value="shop"]');
     if (shopLabel) {
@@ -145,6 +183,20 @@
         }
         // Uncheck all wedding options
         wedOptions.querySelectorAll('input[name="type"]').forEach(r => r.checked = false);
+      }
+    }
+
+    // Toggle Wedding Examples Preview
+    const wedPreview = document.getElementById('wedding-preview');
+    if (wedPreview) {
+      if (customerValue === 'wedding') {
+        wedPreview.style.display = '';
+        // Re-trigger animation
+        wedPreview.style.animation = 'none';
+        wedPreview.offsetHeight; // force reflow
+        wedPreview.style.animation = '';
+      } else {
+        wedPreview.style.display = 'none';
       }
     }
 

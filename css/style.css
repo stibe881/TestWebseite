@@ -2076,6 +2076,188 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
 }
 
 /* ============================================
+   Wedding Preview (Hochzeitspaar Examples)
+   ============================================ */
+
+.wedding-preview {
+  background:
+    radial-gradient(ellipse 80% 60% at 100% 0%, rgba(230, 178, 74, 0.08), transparent 60%),
+    var(--surface-raised);
+  border: 1.5px solid var(--border-gold);
+  border-radius: var(--r-xl);
+  padding: 1.5rem;
+  animation: wedPreviewSlideIn 0.5s var(--ease-out-expo) both;
+  overflow: hidden;
+  position: relative;
+}
+.wedding-preview::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft), var(--gold));
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+}
+
+@keyframes wedPreviewSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 600px;
+  }
+}
+
+.wedding-preview__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--gold-deep);
+  margin-bottom: 1rem;
+}
+.wedding-preview__icon {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.wedding-preview__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+@media (max-width: 720px) {
+  .wedding-preview__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wedding-preview__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1rem 0.85rem;
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--border-soft);
+  background: var(--white);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 0.25s var(--ease-out),
+    transform 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+.wedding-preview__card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md), 0 0 0 3px rgba(230, 178, 74, 0.10);
+}
+.wedding-preview__card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-out-expo);
+}
+.wedding-preview__card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Featured card (Premium) */
+.wedding-preview__card--featured {
+  border-color: var(--gold);
+  background: linear-gradient(160deg, var(--white) 0%, rgba(230, 178, 74, 0.10) 100%);
+  box-shadow: 0 0 0 1px rgba(230, 178, 74, 0.15);
+}
+.wedding-preview__card--featured .wedding-preview__card-badge {
+  background: var(--gold);
+  color: var(--graphite);
+}
+
+.wedding-preview__card-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--r-pill);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(230, 178, 74, 0.16);
+  color: var(--gold-deep);
+}
+
+.wedding-preview__card-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.wedding-preview__card-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  flex: 1;
+}
+
+.wedding-preview__card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+  margin-top: 0.25rem;
+  transition: gap 0.25s var(--ease-out);
+}
+.wedding-preview__card:hover .wedding-preview__card-link {
+  gap: 0.55rem;
+}
+.wedding-preview__card-link svg {
+  transition: transform 0.25s var(--ease-out);
+}
+.wedding-preview__card:hover .wedding-preview__card-link svg {
+  transform: translate(2px, -2px);
+}
+
+.wedding-preview__all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: gap 0.25s var(--ease-out), color 0.2s;
+}
+.wedding-preview__all-link:hover {
+  gap: 0.75rem;
+  color: var(--gold);
+}
+.wedding-preview__all-link svg {
+  transition: transform 0.3s var(--ease-out);
+}
+.wedding-preview__all-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ============================================
    SUPPORT page
    ============================================ */
 
@@ -2609,3 +2791,31 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
 .calc-option input:not(:checked) ~ .calc-option__body .calc-option__sub--expandable { display: none; }
 .calc-option input:checked ~ .calc-option__body .calc-option__sub--expandable { display: block; animation: fadeInDown 0.3s ease-out forwards; }
 @keyframes fadeInDown { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ============================================
+   Heart Explosion Effect
+   ============================================ */
+.heart-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 1.5rem;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0);
+  animation: heartExplode 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes heartExplode {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translate(calc(-50% + var(--tx) * 0.4), calc(-50% + var(--ty) * 0.4)) scale(1.2) rotate(var(--rot));
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0.8) rotate(calc(var(--rot) * 1.5));
+    opacity: 0;
+  }
+}
