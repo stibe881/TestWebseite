@@ -1,0 +1,70 @@
+# Gross ICT
+
+> Ihr Partner für Webseiten & Informatik-Dienstleistungen in der Zentralschweiz.
+
+Gross ICT ist ein Informatik-Unternehmen mit Sitz in Zell, Kanton Luzern, Schweiz. Inhaber ist Stefan Gross. Das Unternehmen bietet massgeschneiderte digitale Lösungen für KMU (kleine und mittlere Unternehmen) in der Zentralschweiz an.
+
+## Kontakt
+
+- Firma: Gross ICT
+- Inhaber: Stefan Gross
+- Adresse: Neuhushof 3, 6144 Zell, Luzern, Schweiz
+- Telefon: +41 41 562 34 16
+- E-Mail: info@gross-ict.ch
+- Support-E-Mail: support@gross-ict.ch
+- Webseite: https://gross-ict.ch
+- Öffnungszeiten: Montag bis Freitag, 08:00 – 17:30 Uhr
+
+## Dienstleistungen und Preise
+
+### 1. Webseiten erstellen lassen
+- Professionelle, massgeschneiderte Webseiten für Unternehmen und KMU
+- Festpreis ab CHF 1'500
+- Responsive Design, SEO-optimiert, wartbar
+
+### 2. Web-Applikationen
+- Individuelle Web-Apps (Kundenportale, Buchungssysteme, Dashboards)
+- Festpreis ab CHF 15'000
+
+### 3. Mobile Apps
+- Native und Cross-Platform Apps für iOS und Android
+- Festpreis ab CHF 20'000
+
+### 4. IT-Support & Helpdesk
+- Remote-Support und Vor-Ort-Service in der Zentralschweiz
+- Wartungsverträge: Basic ab CHF 49/Mt., Professional ab CHF 210/Mt., Enterprise individuell
+- Stundensatz ohne Vertrag: CHF 165/h (15-Minuten-Takt)
+- Reaktionszeit je nach Paket: 8h, 4h oder 1h
+
+### 5. Cyber Security & Firewall
+- Firewall-Konfiguration, Endpoint-Protection, Virenscanner
+- Preis auf Anfrage
+
+### 6. Netzwerk & WLAN
+- WLAN-Ausleuchtung, LAN/WAN-Planung, VPN-Einrichtung
+- Preis auf Anfrage
+
+### 7. Server & Cloud
+- On-Premises-Server, Cloud (Azure, Microsoft 365), hybride Lösungen
+- Backup mit Restore-Tests, Disaster-Recovery-Pläne
+- Preis auf Anfrage
+
+## Bedientes Gebiet
+
+Zell, Luzern, Sursee, Willisau, Hochdorf, Zug, Schwyz, Stans, Sarnen und die gesamte Zentralschweiz.
+
+## Referenzen (realisierte Projekte)
+
+- Gjoni Work (gjoni-work.ch) — Webseite für Reinigungsunternehmen
+- Steinmann Melktechnik GmbH — Moderne Unternehmenswebsite
+- Ackert Garten GmbH (ackert.ch) — Digitale Präsenz mit SEO
+- Die Rollende Pizzeria — Webseite mit digitaler Speisekarte
+- Vier Korken (vierkorken.ch) — Premium Weinshop / E-Commerce
+
+## Besonderheiten
+
+- Festpreise statt Stundensätze bei Webprojekten
+- Persönlicher Ansprechpartner (kein Callcenter)
+- Erstgespräch immer kostenlos und unverbindlich
+- Hosting auf Schweizer Servern (Standort Zürich)
+- Daten bleiben in der Schweiz

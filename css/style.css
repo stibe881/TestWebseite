@@ -1,9 +1,9 @@
 /* ============================================
-   GROSS ICT — Design System
+   GROSS ICT â€” Design System
    ============================================ */
 
 :root {
-  /* Brand Colors — same family, no pure black */
+  /* Brand Colors â€” same family, no pure black */
   --gold: #e6b24a;
   --gold-deep: #c8943a;
   --gold-soft: #f0c97a;
@@ -13,7 +13,7 @@
   --gray-light: #c8c2b6;
   --gray-dark: #5a534a;
 
-  /* Warm graphite replaces pure ink — clearly NOT black */
+  /* Warm graphite replaces pure ink â€” clearly NOT black */
   --graphite: #2c2820;
   --graphite-soft: #3a342d;
   --graphite-muted: #4a423a;
@@ -49,7 +49,7 @@
   --border-strong: rgba(44, 40, 32, 0.16);
   --border-gold: rgba(230, 178, 74, 0.40);
 
-  /* Type — System-Stack wie auf gross-ict.ch */
+  /* Type â€” System-Stack wie auf gross-ict.ch */
   --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Helvetica Neue", Arial, sans-serif;
   --font-display: var(--font-system);
   --font-body: var(--font-system);
@@ -80,7 +80,7 @@
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 
-  /* Radii — slightly rounder for modern feel */
+  /* Radii â€” slightly rounder for modern feel */
   --r-sm: 6px;
   --r-md: 12px;
   --r-lg: 20px;
@@ -88,7 +88,7 @@
   --r-2xl: 36px;
   --r-pill: 999px;
 
-  /* Shadows — softer, warmer (graphite-tinted) */
+  /* Shadows â€” softer, warmer (graphite-tinted) */
   --shadow-xs: 0 1px 2px rgba(44, 40, 32, 0.04);
   --shadow-sm: 0 2px 6px rgba(44, 40, 32, 0.05), 0 1px 2px rgba(44, 40, 32, 0.04);
   --shadow-md: 0 8px 24px rgba(44, 40, 32, 0.08), 0 2px 6px rgba(44, 40, 32, 0.04);
@@ -185,7 +185,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
 
 .gold-accent { color: var(--gold-deep); }
 
-/* Brand signature — gold underline beneath a heading word, echoes the og-image */
+/* Brand signature â€” gold underline beneath a heading word, echoes the og-image */
 .gold-underline {
   position: relative;
   display: inline-block;
@@ -502,6 +502,10 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   line-height: 1.6;
   margin-bottom: 2.25rem;
 }
+.hero__sub .accent {
+  color: var(--gold-deep);
+  font-weight: 700;
+}
 
 .hero__actions {
   display: flex; flex-wrap: wrap; gap: 0.875rem;
@@ -592,7 +596,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   .hero-stat__sub { white-space: normal; }
 }
 
-/* ---- Hero Einspieler — modern framed mini-video ---- */
+/* ---- Hero Einspieler â€” modern framed mini-video ---- */
 .hero__visual {
   position: relative;
   align-self: center;
@@ -686,7 +690,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
 }
 .hero-reel__chip svg { width: 12px; height: 12px; }
 
-/* Floating gold tick badges that orbit the reel — ambient brand presence */
+/* Floating gold tick badges that orbit the reel â€” ambient brand presence */
 .hero-reel__badge {
   position: absolute;
   background: var(--white);
@@ -703,7 +707,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   font-weight: 500;
 }
 .hero-reel__badge::before {
-  content: "✓";
+  content: "âœ“";
   color: var(--gold-deep);
   font-weight: 700;
 }
@@ -1525,7 +1529,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   border-bottom: 1px solid rgba(18,22,25,0.1);
 }
 .ref-card__visual-mock::after {
-  content: "● ● ●";
+  content: "â— â— â—";
   position: absolute;
   top: 2px; left: 8px;
   font-size: 6px;
@@ -1621,7 +1625,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   color: var(--ink-soft);
 }
 .service-detail__list li::before {
-  content: "✓";
+  content: "âœ“";
   position: absolute;
   left: 0;
   color: var(--gold-deep);
@@ -1698,7 +1702,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
 }
 
 /* ============================================
-   SHOWCASE — Video-Sektion mit Remotion-Clip
+   SHOWCASE â€” Video-Sektion mit Remotion-Clip
    ============================================ */
 
 .showcase {
@@ -1760,6 +1764,33 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   white-space: nowrap;
   border: 0;
 }
+.sr-only:focus {
+  position: fixed;
+  top: 1rem; left: 1rem;
+  width: auto; height: auto;
+  padding: 0.75rem 1.25rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: var(--r-md);
+  z-index: 9999;
+  box-shadow: var(--shadow-lg);
+}
+
+/* WCAG 2.4.7 — Focus Visible for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
 .text-center { text-align: center; }
 .mt-2 { margin-top: 0.5rem; }
 .mt-4 { margin-top: 1rem; }
@@ -1767,7 +1798,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
 .mb-4 { margin-bottom: 1rem; }
 
 /* ============================================
-   CALCULATOR — Webseitenrechner
+   CALCULATOR â€” Webseitenrechner
    ============================================ */
 
 .calc {
@@ -2497,7 +2528,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   line-height: 1.45;
 }
 .sla-card__list li::before {
-  content: "✓";
+  content: "âœ“";
   position: absolute;
   left: 0; top: 0;
   color: var(--gold-deep);
@@ -2678,7 +2709,7 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   margin-top: 1rem;
 }
 
-/* ── Cookie-Banner ─────────────────────────────── */
+/* â”€â”€ Cookie-Banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .cookie-banner {
   position: fixed;
   bottom: 1.5rem;
@@ -2817,5 +2848,55 @@ h4 { font-size: clamp(1.125rem, 0.7vw + 1rem, 1.5rem); font-weight: 600; }
   100% {
     transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0.8) rotate(calc(var(--rot) * 1.5));
     opacity: 0;
+  }
+}
+
+/* ============================================
+   WCAG 3.0 Draft — Accessibility Enhancements
+   ============================================ */
+
+/* --- High Contrast Mode (prefers-contrast) --- */
+@media (prefers-contrast: more) {
+  :root {
+    --text-primary: #000;
+    --text-secondary: #1a1a1a;
+    --gold: #b8860b;
+    --gold-deep: #8b6508;
+    --border-soft: rgba(0,0,0,0.4);
+    --surface-raised: #fff;
+    --surface-base: #f5f5f5;
+  }
+  .btn { border: 2px solid currentColor; }
+  .service-card { border-width: 2px; }
+  .nav__link::after { height: 2px; }
+  a { text-decoration: underline; }
+  .nav__link, .btn, .footer__list a { text-decoration: none; }
+}
+
+/* --- Forced Colors (Windows High Contrast) --- */
+@media (forced-colors: active) {
+  .btn { border: 2px solid ButtonText; }
+  .service-card { border: 2px solid CanvasText; }
+  .nav__link[aria-current="page"] { border-bottom: 3px solid Highlight; }
+  :focus-visible { outline: 3px solid Highlight; }
+  .hero__decor, .hero-reel__badge { display: none; }
+}
+
+/* --- Touch Target Minimum 44x44px (WCAG 2.5.8 / 3.0 Target Size) --- */
+@media (pointer: coarse) {
+  .btn { min-height: 44px; min-width: 44px; }
+  .nav__link { min-height: 44px; display: inline-flex; align-items: center; }
+  .nav__toggle { min-width: 44px; min-height: 44px; }
+  .footer__list a { display: inline-block; min-height: 44px; line-height: 44px; }
+  .faq-item summary { min-height: 44px; display: flex; align-items: center; }
+  .ref-card__visit { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+/* --- Text Spacing Override (WCAG 1.4.12) --- */
+@supports (text-spacing-trim: normal) {
+  body {
+    line-height: 1.5;
+    letter-spacing: 0.012em;
+    word-spacing: 0.016em;
   }
 }
