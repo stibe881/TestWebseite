@@ -1,8 +1,8 @@
 # Gross ICT
 
-> Ihr Partner für Webseiten & Informatik-Dienstleistungen in der Zentralschweiz.
+> Ihr Partner für Webseiten & Informatik-Dienstleistungen in der Zentralschweiz — für KMU, Vereine, NPOs, Privatpersonen und Hochzeitspaare.
 
-Gross ICT ist ein Informatik-Unternehmen mit Sitz in Zell, Kanton Luzern, Schweiz. Inhaber ist Stefan Gross. Das Unternehmen bietet massgeschneiderte digitale Lösungen für KMU (kleine und mittlere Unternehmen) in der Zentralschweiz an.
+Gross ICT ist ein Informatik-Unternehmen mit Sitz in Zell, Kanton Luzern, Schweiz. Inhaber ist Stefan Gross. Das Unternehmen bietet massgeschneiderte digitale Lösungen für KMU, Vereine, Non-Profit-Organisationen (NPOs/NGOs), Privatpersonen und Hochzeitspaare in der Zentralschweiz an.
 
 ## Kontakt
 
@@ -15,36 +15,60 @@ Gross ICT ist ein Informatik-Unternehmen mit Sitz in Zell, Kanton Luzern, Schwei
 - Webseite: https://gross-ict.ch
 - Öffnungszeiten: Montag bis Freitag, 08:00 – 17:30 Uhr
 
+## Zielgruppen & Preisvorteile
+
+### KMU / Unternehmen
+- Standardpreise, keine zusätzlichen Rabatte
+- Alle Leistungen verfügbar
+
+### Vereine / NPOs / NGOs / Stiftungen / Genossenschaften
+- **25 % Rabatt** auf alle Webprojekte
+- Ideal für Vereinswebseiten, Stiftungs-Auftritte, NGO-Webseiten
+
+### Privatpersonen
+- **50 % Rabatt** auf alle Webprojekte
+- Ideal für persönliche Portfolios, Blogs, Hobby-Seiten
+
+### Hochzeitspaare
+- Spezielle Hochzeitspakete zu festen Preisen
+- Pakete ab CHF 500
+
 ## Dienstleistungen und Preise
 
 ### 1. Webseiten erstellen lassen
-- Professionelle, massgeschneiderte Webseiten für Unternehmen und KMU
-- Festpreis ab CHF 1'500
+- Professionelle, massgeschneiderte Webseiten für Unternehmen, Vereine, NPOs und Privatpersonen
+- Festpreis ab CHF 1'500 (KMU), ab CHF 1'125 (Vereine/NPOs), ab CHF 750 (Privatpersonen)
 - Responsive Design, SEO-optimiert, wartbar
 
-### 2. Web-Applikationen
+### 2. Hochzeitswebseiten
+- **Paket "Save the Date" (Basic)**: CHF 500 — One-Pager mit Countdown & RSVP
+- **Paket "Der große Tag" (Premium)**: CHF 950 — Mehrseitige Seite mit Timeline, Maps, erweitertem RSVP, Trauzeugen-Vorstellung
+- **Paket "Für die Ewigkeit" (Deluxe)**: CHF 1'500 — Passwortschutz, Online-Galerie, digitale Dankeskarte, Gästebuch
+- Zusatzleistungen: Eigene Domain (+CHF 80), Hochzeitslogo (+CHF 350), Digitales Mailing (+CHF 250), QR-Code Designpaket (+CHF 150), Verwaltungs-Backend (+CHF 250), interaktiver Sitzplan (+CHF 200), Spotify Wunschkonzert (+CHF 100)
+
+### 3. Web-Applikationen
 - Individuelle Web-Apps (Kundenportale, Buchungssysteme, Dashboards)
 - Festpreis ab CHF 15'000
 
-### 3. Mobile Apps
+### 4. Mobile Apps
 - Native und Cross-Platform Apps für iOS und Android
 - Festpreis ab CHF 20'000
 
-### 4. IT-Support & Helpdesk
+### 5. IT-Support & Helpdesk
 - Remote-Support und Vor-Ort-Service in der Zentralschweiz
 - Wartungsverträge: Basic ab CHF 49/Mt., Professional ab CHF 210/Mt., Enterprise individuell
 - Stundensatz ohne Vertrag: CHF 165/h (15-Minuten-Takt)
 - Reaktionszeit je nach Paket: 8h, 4h oder 1h
 
-### 5. Cyber Security & Firewall
+### 6. Cyber Security & Firewall
 - Firewall-Konfiguration, Endpoint-Protection, Virenscanner
 - Preis auf Anfrage
 
-### 6. Netzwerk & WLAN
+### 7. Netzwerk & WLAN
 - WLAN-Ausleuchtung, LAN/WAN-Planung, VPN-Einrichtung
 - Preis auf Anfrage
 
-### 7. Server & Cloud
+### 8. Server & Cloud
 - On-Premises-Server, Cloud (Azure, Microsoft 365), hybride Lösungen
 - Backup mit Restore-Tests, Disaster-Recovery-Pläne
 - Preis auf Anfrage
@@ -64,6 +88,9 @@ Zell, Luzern, Sursee, Willisau, Hochdorf, Zug, Schwyz, Stans, Sarnen und die ges
 ## Besonderheiten
 
 - Festpreise statt Stundensätze bei Webprojekten
+- 25 % Rabatt für Vereine und NPOs
+- 50 % Rabatt für Privatpersonen
+- Spezielle Hochzeitspakete ab CHF 500
 - Persönlicher Ansprechpartner (kein Callcenter)
 - Erstgespräch immer kostenlos und unverbindlich
 - Hosting auf Schweizer Servern (Standort Zürich)
