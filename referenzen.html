@@ -55,7 +55,7 @@
           "item": {
             "@type": "CreativeWork",
             "name": "Steinmann Melktechnik GmbH",
-            "url": "https://gross-ict.github.io/steinmannmelktechnik/"
+            "url": "https://steinmannhoftech.ch/"
           }
         },
         {
@@ -73,7 +73,7 @@
           "item": {
             "@type": "CreativeWork",
             "name": "Die Rollende Pizzeria",
-            "url": "https://gross-ict.github.io/rollendepizzeria.ch/"
+            "url": "https://rollendepizzeria.ch/"
           }
         },
         {
@@ -83,6 +83,15 @@
             "@type": "CreativeWork",
             "name": "Vier Korken - Premium Weinshop",
             "url": "https://www.vierkorken.ch/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "FC Zell",
+            "url": "https://fczell.ch/"
           }
         }
       ]
@@ -147,11 +156,114 @@
 
     <section class="section">
       <div class="container">
+        <div class="ref-filter" id="ref-filter" aria-label="Nach Branche filtern">
+          <button class="ref-filter__chip ref-filter__chip--active" data-filter="alle">Alle</button>
+          <button class="ref-filter__chip" data-filter="bau">Bau</button>
+          <button class="ref-filter__chip" data-filter="detailhandel">Detailhandel</button>
+          <button class="ref-filter__chip" data-filter="gartenbau">Gartenbau</button>
+          <button class="ref-filter__chip" data-filter="gastronomie">Gastronomie</button>
+          <button class="ref-filter__chip" data-filter="reinigung">Reinigung</button>
+          <button class="ref-filter__chip" data-filter="verein">Verein</button>
+          <button class="ref-filter__chip" data-filter="webshop">Webshop</button>
+        </div>
+
         <div class="ref-grid">
 
-          <a class="ref-card reveal" href="https://gjoni-work.ch/" target="_blank" rel="noopener">
+          <!-- Branche: Bau -->
+          <a class="ref-card reveal" href="https://steinmannhoftech.ch/" target="_blank" rel="noopener" data-branche="bau">
             <div class="ref-card__visual">
-              <img class="ref-card__img" src="assets/references/gjoni-work.png" alt="Webseite Gjoni Work" loading="lazy" width="800" height="500" style="object-fit: cover; background: #222;" />
+              <img class="ref-card__img" src="assets/references/steinmann-mockup.png" alt="Webseite Steinmann Melktechnik GmbH" loading="lazy" width="800" height="500" />
+            </div>
+            <div class="ref-card__client">Steinmann Melktechnik GmbH</div>
+            <h3 class="ref-card__title">Moderne Unternehmens­website</h3>
+            <p class="ref-card__copy">
+              Entwicklung einer modernen Webpräsenz zur Präsentation von Melktechnik-Lösungen und Referenzprojekten.
+            </p>
+            <span class="ref-card__visit">
+              steinmannhoftech.ch ansehen
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
+            <div class="ref-card__tags">
+              <span class="ref-card__tag-pill">Webdesign</span>
+              <span class="ref-card__tag-pill">Frontend</span>
+              <span class="ref-card__tag-pill">Dienstleistungen</span>
+              <span class="ref-card__tag-pill ref-card__tag-pill--branche">Bau</span>
+            </div>
+          </a>
+
+          <!-- Branche: Detailhandel & Webshop -->
+          <a class="ref-card reveal" data-delay="1" href="https://www.vierkorken.ch/" target="_blank" rel="noopener" data-branche="detailhandel webshop">
+            <div class="ref-card__visual">
+              <img class="ref-card__img" src="assets/references/vierkorken-mockup.png" alt="Webseite Vier Korken" loading="lazy" width="800" height="500" />
+            </div>
+            <div class="ref-card__client">Vier Korken</div>
+            <h3 class="ref-card__title">Premium Weinshop</h3>
+            <p class="ref-card__copy">
+              Exklusiver Onlineshop für Premium-Weine. Entdecken Sie erlesene Weine aus aller Welt in einem eleganten und benutzerfreundlichen Webshop.
+            </p>
+            <span class="ref-card__visit">
+              vierkorken.ch ansehen
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
+            <div class="ref-card__tags">
+              <span class="ref-card__tag-pill">Webdesign</span>
+              <span class="ref-card__tag-pill">Webshop</span>
+              <span class="ref-card__tag-pill">Frontend</span>
+              <span class="ref-card__tag-pill">Backend</span>
+              <span class="ref-card__tag-pill ref-card__tag-pill--branche">Detailhandel</span>
+              <span class="ref-card__tag-pill ref-card__tag-pill--branche">Webshop</span>
+            </div>
+          </a>
+
+          <!-- Branche: Gartenbau -->
+          <a class="ref-card reveal" href="https://ackert.ch" target="_blank" rel="noopener" data-branche="gartenbau">
+            <div class="ref-card__visual">
+              <img class="ref-card__img" src="assets/references/ackert-mockup.png" alt="Webseite Ackert Garten GmbH" loading="lazy" width="800" height="500" />
+            </div>
+            <div class="ref-card__client">Ackert Garten GmbH</div>
+            <h3 class="ref-card__title">Digitale Präsenz</h3>
+            <p class="ref-card__copy">
+              Ansprechende Webseite für einen Gartenbaubetrieb zur Online-Kundengewinnung — mit klarer SEO-Basis und einfacher Inhaltspflege.
+            </p>
+            <span class="ref-card__visit">
+              ackert.ch ansehen
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
+            <div class="ref-card__tags">
+              <span class="ref-card__tag-pill">Webdesign</span>
+              <span class="ref-card__tag-pill">Frontend</span>
+              <span class="ref-card__tag-pill">Dienstleistungen</span>
+              <span class="ref-card__tag-pill ref-card__tag-pill--branche">Gartenbau</span>
+            </div>
+          </a>
+
+          <!-- Branche: Gastronomie -->
+          <a class="ref-card reveal" data-delay="1" href="https://rollendepizzeria.ch/" target="_blank" rel="noopener" data-branche="gastronomie">
+            <div class="ref-card__visual">
+              <img class="ref-card__img" src="assets/references/pizzeria-mockup.png" alt="Webseite Die Rollende Pizzeria" loading="lazy" width="800" height="500" />
+            </div>
+            <div class="ref-card__client">Die Rollende Pizzeria</div>
+            <h3 class="ref-card__title">Webseite &amp; Speisekarte</h3>
+            <p class="ref-card__copy">
+              Ansprechende Webseite mit digitaler Speisekarte zur Optimierung des Kundenkreises — mobil-first, schnell, mit klarer Bestellführung.
+            </p>
+            <span class="ref-card__visit">
+              rollendepizzeria.ch ansehen
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
+            <div class="ref-card__tags">
+              <span class="ref-card__tag-pill">Webdesign</span>
+              <span class="ref-card__tag-pill">Frontend</span>
+              <span class="ref-card__tag-pill">Dienstleistungen</span>
+              <span class="ref-card__tag-pill">MS365 Tenant</span>
+              <span class="ref-card__tag-pill ref-card__tag-pill--branche">Gastronomie</span>
+            </div>
+          </a>
+
+          <!-- Branche: Reinigung -->
+          <a class="ref-card reveal" href="https://gjoni-work.ch/" target="_blank" rel="noopener" data-branche="reinigung">
+            <div class="ref-card__visual">
+              <img class="ref-card__img" src="assets/references/gjoni-mockup.png" alt="Webseite Gjoni Work" loading="lazy" width="800" height="500" style="object-fit: cover; background: #222;" />
             </div>
             <div class="ref-card__client">Gjoni Work</div>
             <h3 class="ref-card__title">Reinigungs- &amp; Hauswartungsdienste</h3>
@@ -165,84 +277,30 @@
             <div class="ref-card__tags">
               <span class="ref-card__tag-pill">Webdesign</span>
               <span class="ref-card__tag-pill">Frontend</span>
-              <span class="ref-card__tag-pill">Dienstleistung</span>
+              <span class="ref-card__tag-pill">Dienstleistungen</span>
+              <span class="ref-card__tag-pill">MS365 Tenant</span>
+              <span class="ref-card__tag-pill ref-card__tag-pill--branche">Reinigung</span>
             </div>
           </a>
-          <a class="ref-card reveal" href="https://gross-ict.github.io/steinmannmelktechnik/" target="_blank" rel="noopener">
+
+          <!-- Branche: Verein -->
+          <a class="ref-card reveal" data-delay="1" href="https://fczell.ch/" target="_blank" rel="noopener" data-branche="verein">
             <div class="ref-card__visual">
-              <img class="ref-card__img" src="assets/references/steinmann-melktechnik.jpg" alt="Webseite Steinmann Melktechnik GmbH" loading="lazy" width="800" height="500" />
+              <img class="ref-card__img" src="assets/references/fczell-mockup.png" alt="Webseite FC Zell" loading="lazy" width="800" height="500" />
             </div>
-            <div class="ref-card__client">Steinmann Melktechnik GmbH</div>
-            <h3 class="ref-card__title">Moderne Unternehmens­website</h3>
+            <div class="ref-card__client">FC Zell</div>
+            <h3 class="ref-card__title">Vereinswebseite</h3>
             <p class="ref-card__copy">
-              Entwicklung einer modernen Webpräsenz zur Präsentation von Melktechnik-Lösungen und Referenzprojekten.
+              Moderne Webpräsenz für den Fussballclub Zell — mit Mannschafts­übersicht, News, Spielplan und aktivem Vereinsleben.
             </p>
             <span class="ref-card__visit">
-              steinmannmelktechnik.ch ansehen
+              fczell.ch ansehen
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
             </span>
             <div class="ref-card__tags">
               <span class="ref-card__tag-pill">Webdesign</span>
               <span class="ref-card__tag-pill">Frontend</span>
-              <span class="ref-card__tag-pill">React</span>
-            </div>
-          </a>
-
-          <a class="ref-card reveal" data-delay="1" href="https://ackert.ch" target="_blank" rel="noopener">
-            <div class="ref-card__visual">
-              <img class="ref-card__img" src="assets/references/ackert-garten.jpg" alt="Webseite Ackert Garten GmbH" loading="lazy" width="800" height="500" />
-            </div>
-            <div class="ref-card__client">Ackert Garten GmbH</div>
-            <h3 class="ref-card__title">Digitale Präsenz</h3>
-            <p class="ref-card__copy">
-              Ansprechende Webseite für einen Gartenbaubetrieb zur Online-Kundengewinnung — mit klarer SEO-Basis und einfacher Inhaltspflege.
-            </p>
-            <span class="ref-card__visit">
-              ackert.ch ansehen
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-            </span>
-            <div class="ref-card__tags">
-              <span class="ref-card__tag-pill">Webentwicklung</span>
-              <span class="ref-card__tag-pill">SEO</span>
-              <span class="ref-card__tag-pill">CMS</span>
-            </div>
-          </a>
-
-          <a class="ref-card reveal" href="https://gross-ict.github.io/rollendepizzeria.ch/" target="_blank" rel="noopener">
-            <div class="ref-card__visual">
-              <img class="ref-card__img" src="assets/references/rollende-pizzeria.jpg" alt="Webseite Die Rollende Pizzeria" loading="lazy" width="800" height="500" />
-            </div>
-            <div class="ref-card__client">Die Rollende Pizzeria</div>
-            <h3 class="ref-card__title">Webseite &amp; Speisekarte</h3>
-            <p class="ref-card__copy">
-              Ansprechende Webseite mit digitaler Speisekarte zur Optimierung des Kundenkreises — mobil-first, schnell, mit klarer Bestellführung.
-            </p>
-            <span class="ref-card__visit">
-              rollendepizzeria.ch ansehen
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-            </span>
-            <div class="ref-card__tags">
-              <span class="ref-card__tag-pill">Webdesign</span>
-              <span class="ref-card__tag-pill">Gastronomie</span>
-            </div>
-          </a>
-
-          <a class="ref-card reveal" data-delay="1" href="https://www.vierkorken.ch/" target="_blank" rel="noopener">
-            <div class="ref-card__visual">
-              <img class="ref-card__img" src="assets/references/vierkorken.png" alt="Webseite Vier Korken" loading="lazy" width="800" height="500" />
-            </div>
-            <div class="ref-card__client">Vier Korken</div>
-            <h3 class="ref-card__title">Premium Weinshop</h3>
-            <p class="ref-card__copy">
-              Exklusiver Onlineshop für Premium-Weine. Entdecken Sie erlesene Weine aus aller Welt in einem eleganten und benutzerfreundlichen Webshop.
-            </p>
-            <span class="ref-card__visit">
-              vierkorken.ch ansehen
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-            </span>
-            <div class="ref-card__tags">
-              <span class="ref-card__tag-pill">E-Commerce</span>
-              <span class="ref-card__tag-pill">Webdesign</span>
+              <span class="ref-card__tag-pill ref-card__tag-pill--branche">Verein</span>
             </div>
           </a>
 
@@ -340,5 +398,42 @@
   <script src="js/cookie-banner.js" defer></script>
 
   <script src="js/main.js" defer></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const filterBar = document.getElementById('ref-filter');
+    if (!filterBar) return;
+
+    const chips = filterBar.querySelectorAll('.ref-filter__chip');
+    const cards = document.querySelectorAll('.ref-card[data-branche]');
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        const filter = chip.dataset.filter;
+
+        // Update active chip
+        chips.forEach(function (c) { c.classList.remove('ref-filter__chip--active'); });
+        chip.classList.add('ref-filter__chip--active');
+
+        // Filter cards
+        let delay = 0;
+        cards.forEach(function (card) {
+          const cardBranches = card.dataset.branche.split(' ');
+          if (filter === 'alle' || cardBranches.includes(filter)) {
+            card.removeAttribute('data-hidden');
+            card.classList.remove('ref-card--fade-in');
+            void card.offsetHeight; // force reflow
+            card.classList.add('ref-card--fade-in');
+            card.style.animationDelay = delay * 0.06 + 's';
+            delay++;
+          } else {
+            card.setAttribute('data-hidden', 'true');
+            card.classList.remove('ref-card--fade-in');
+          }
+        });
+      });
+    });
+  });
+  </script>
 </body>
 </html>
